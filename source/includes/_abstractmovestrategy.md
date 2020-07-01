@@ -66,3 +66,60 @@ Il faut savoir que dans l’algorithme ces points sont stockés sous la forme d�
 ## API
 
 [Purepursuit](includes/API/html/class_pure_pursuit.html)
+
+# Summary
+
+| Members                                                                            | Descriptions                                                                                                                                                                                                                  |
+| ---------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `class`[`AbstractCodewheel`](#class_abstract_codewheel)                            | Classe abstraite d'une roue codeuse.                                                                                                                                                                                          |
+| `class`[`AbstractMotor`](#class_abstract_motor)                                    | Instance de moteur.                                                                                                                                                                                                           |
+| `class`[`AbstractMoveStrategy`](#class_abstract_move_strategy)                     | Interface de Stratégie de mouvement.                                                                                                                                                                                          |
+| `class`[`Adafruit_TCS34725`](#class_adafruit___t_c_s34725)                         |
+| `class`[`BrushlessMotor`](#class_brushless_motor)                                  |
+| `class`[`ButtonCard`](#class_button_card)                                          |
+| `class`[`Clock`](#class_clock)                                                     | Utilitaire pour gérer le temps dans vos programmes Arduino.                                                                                                                                                                   |
+| `class`[`Codewheel`](#class_codewheel)                                             | Fait la passerelle entre les roues codeuses et le compteur.                                                                                                                                                                   |
+| `class`[`ColorSensor`](#class_color_sensor)                                        |
+| `class`[`CRC16`](#class_c_r_c16)                                                   |
+| `class`[`DCMotor`](#class_d_c_motor)                                               | Pilotage de moteur continu.                                                                                                                                                                                                   |
+| `class`[`DCMotorsDriver`](#class_d_c_motors_driver)                                | Utilisation des drivers moteurs.                                                                                                                                                                                              |
+| `class`[`DifferentialController`](#class_differential_controller)                  | Controle les moteurs.                                                                                                                                                                                                         |
+| `class`[`EchoHandler`](#class_echo_handler)                                        | Gère le pin de reception du capteur.                                                                                                                                                                                          |
+| `class`[`EndStop`](#class_end_stop)                                                | Capteur fin de course est une classe permettant d'utiliser les capteurs fins de courses (clic de souris/bouton poussoir) Pour utiliser cette classe le bouton doit être d'un côté relié à la masse et de l'autre à l'arduino. |
+| `class`[`FullSpeedServo`](#class_full_speed_servo)                                 | Pilotage de Servomoteur particulier.                                                                                                                                                                                          |
+| `class`[`Lsm303`](#class_lsm303)                                                   |
+| `class`[`MagneticCompas`](#class_magnetic_compas)                                  |
+| `class`[`NonCopyable`](#class_non_copyable)                                        | Classe a hériter pour empécher la copie de cette dernière.                                                                                                                                                                    |
+| `class`[`Odometry`](#class_odometry)                                               | Calcule la position en temps réel du robot.                                                                                                                                                                                   |
+| `class`[`SerialTalks::ostream`](#class_serial_talks_1_1ostream)                    | Stream virtuel pour les erreurs et autre. est un outils pour permettre de mieux transmettre les erreurs rencontrées et les STD::OUT.                                                                                          |
+| `class`[`PeriodicProcess`](#class_periodic_process)                                | Classe à implémenter pour gérer les appels dans la loop.                                                                                                                                                                      |
+| `class`[`PID`](#class_p_i_d)                                                       | Classe d'asservissement.                                                                                                                                                                                                      |
+| `class`[`PositionController`](#class_position_controller)                          | Classe support des objets [AbstractMoveStrategy](#class_abstract_move_strategy).                                                                                                                                              |
+| `class`[`PurePursuit`](#class_pure_pursuit)                                        | Trajectoire courbe le long d'une ligne brisée.                                                                                                                                                                                |
+| `class`[`QueueArray`](#class_queue_array)                                          |
+| `class`[`RobotArm`](#class_robot_arm)                                              |
+| `class`[`SensorListener`](#class_sensor_listener)                                  |
+| `class`[`SerialTalks`](#class_serial_talks)                                        | Object de communication serial avec un ordinateur.                                                                                                                                                                            |
+| `class`[`SerialTopics`](#class_serial_topics)                                      |
+| `class`[`ShiftDynamixelClass`](#class_shift_dynamixel_class)                       |
+| `class`[`ShiftRegAX12`](#class_shift_reg_a_x12)                                    |
+| `class`[`ShiftRegDCMotor`](#class_shift_reg_d_c_motor)                             |
+| `class`[`ShiftRegDCMotorsDriver`](#class_shift_reg_d_c_motors_driver)              |
+| `class`[`ShiftRegister`](#class_shift_register)                                    |
+| `class`[`SoftwareSerial`](#class_software_serial)                                  |
+| `class`[`StepByStepMotor`](#class_step_by_step_motor)                              |
+| `class`[`TrigHandler`](#class_trig_handler)                                        | Gère le pin d'émission du capteur.                                                                                                                                                                                            |
+| `class`[`TurnOnTheSpot`](#class_turn_on_the_spot)                                  | Rotation du robot sans translations.                                                                                                                                                                                          |
+| `class`[`TwoWire`](#class_two_wire)                                                |
+| `class`[`UltrasonicSensor`](#class_ultrasonic_sensor)                              | Permet d'utiliser des capteurs de distance ulrasons.                                                                                                                                                                          |
+| `class`[`Vector`](#class_vector)                                                   |
+| `class`[`VelocityController`](#class_velocity_controller)                          | Objet de controle de la vitesse.                                                                                                                                                                                              |
+| `class`[`VelocityServo`](#class_velocity_servo)                                    | Objet permettant de controller la vitesse d'un servomoteur.                                                                                                                                                                   |
+| `struct`[`_DELAY_TABLE`](#struct___d_e_l_a_y___t_a_b_l_e)                          |
+| `struct`[`Lsm303::AccelData`](#struct_lsm303_1_1_accel_data)                       |
+| `struct`[`Deserializer`](#struct_deserializer)                                     | Objet destiné à extraire des variables d'un flux en octet.                                                                                                                                                                    |
+| `struct`[`Lsm303::MagData`](#struct_lsm303_1_1_mag_data)                           |
+| `struct`[`Position`](#struct_position)                                             | Structure de position.                                                                                                                                                                                                        |
+| `struct`[`Serializer`](#struct_serializer)                                         | Objet destiné à creer un flux de sortie pour les programme cpp.                                                                                                                                                               |
+| `struct`[`SerialTopics::subscription_t`](#struct_serial_topics_1_1subscription__t) | Subscription context structure.                                                                                                                                                                                               |
+| `struct`[`PurePursuit::Waypoint`](#struct_pure_pursuit_1_1_waypoint)               | Structure d'un point de passage de Purpursuit.                                                                                                                                                                                |
