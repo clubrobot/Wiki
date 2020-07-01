@@ -1,0 +1,171 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.18"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Documentation Cpp Arduino:  Fichier source de common/Vector.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="logo_arduino.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Documentation Cpp Arduino
+   &#160;<span id="projectnumber">1.1</span>
+   </div>
+   <div id="projectbrief">Bienvenue dans la documentation Cpp (arduino) du club robot</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.8.18 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Recherche');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_4574b85c0abcef1e41f0bb02fb9bfbe2.html">common</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">Vector.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_vector_8h.html">Aller à la documentation de ce fichier.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef __VECTOR_H__</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define __VECTOR_H__</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#define INIT_SIZE 4</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno"><a class="line" href="_vector_8h.html#a91ad9478d81a7aaf2593e8d9c3d06a14">    4</a></span>&#160;<span class="keyword">typedef</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="_vector_8h.html#a91ad9478d81a7aaf2593e8d9c3d06a14">uint</a>;</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160; </div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="line"><a name="l00007"></a><span class="lineno"><a class="line" href="class_vector.html">    7</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_vector.html">Vector</a></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;{</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00010"></a><span class="lineno"><a class="line" href="class_vector.html#a39d6069675db4ecfc1ab81d440da759a">   10</a></span>&#160;        <a class="code" href="class_vector.html#a39d6069675db4ecfc1ab81d440da759a">Vector</a>() : <a class="code" href="class_vector.html#a24a8b8fb7de145d66feb7554f8e06297">_begin</a>(nullptr), <a class="code" href="class_vector.html#aa824a020aab305ede64432fa4f6ea9f6">_capacity</a>(<a class="code" href="_vector_8h.html#a7ab9c9406d6e8432e3786bd89ec79695">INIT_SIZE</a>), <a class="code" href="class_vector.html#a2749846490cb6e839d8eefa45a084ea0">_size</a>(0)</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;        {</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;            <a class="code" href="class_vector.html#a24a8b8fb7de145d66feb7554f8e06297">_begin</a> = <span class="keyword">new</span> T[<a class="code" href="class_vector.html#aa824a020aab305ede64432fa4f6ea9f6">_capacity</a>];</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;        }</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
+<div class="line"><a name="l00015"></a><span class="lineno"><a class="line" href="class_vector.html#afd524fac19e6d3d69db5198ffe2952b0">   15</a></span>&#160;        <a class="code" href="class_vector.html#afd524fac19e6d3d69db5198ffe2952b0">~Vector</a>()</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;        {</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;            <span class="keyword">delete</span>[] <a class="code" href="class_vector.html#a24a8b8fb7de145d66feb7554f8e06297">_begin</a>;</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;        }</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
+<div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="class_vector.html#ae4a3a0f9075635d43be142607fcadf5a">   20</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_vector.html#ae4a3a0f9075635d43be142607fcadf5a">push_back</a>(T val)</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;        {</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;            <span class="keywordflow">if</span> (<a class="code" href="class_vector.html#a2749846490cb6e839d8eefa45a084ea0">_size</a>&gt;=<a class="code" href="class_vector.html#aa824a020aab305ede64432fa4f6ea9f6">_capacity</a>)</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;            {</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;                <a class="code" href="class_vector.html#a0146747d5a92de79de875b12df8ce58e">reserve</a>(<a class="code" href="class_vector.html#aa824a020aab305ede64432fa4f6ea9f6">_capacity</a>*2);</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;            }</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;            *(<a class="code" href="class_vector.html#a24a8b8fb7de145d66feb7554f8e06297">_begin</a> + (<a class="code" href="class_vector.html#a2749846490cb6e839d8eefa45a084ea0">_size</a>++)) = val;</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        }</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160; </div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
+<div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="class_vector.html#a790b0fff909e8799c059c374ce3762e4">   30</a></span>&#160;        T * <a class="code" href="class_vector.html#a790b0fff909e8799c059c374ce3762e4">begin</a>()<span class="keyword"> const</span></div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="keyword">        </span>{</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;            <span class="keywordflow">return</span> <a class="code" href="class_vector.html#a24a8b8fb7de145d66feb7554f8e06297">_begin</a>;</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        }</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
+<div class="line"><a name="l00035"></a><span class="lineno"><a class="line" href="class_vector.html#a522d78335b65262c5683a528eb7a18ff">   35</a></span>&#160;        T * <a class="code" href="class_vector.html#a522d78335b65262c5683a528eb7a18ff">end</a>()<span class="keyword"> const</span></div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="keyword">        </span>{</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;            <span class="keywordflow">return</span> <a class="code" href="class_vector.html#a24a8b8fb7de145d66feb7554f8e06297">_begin</a>+<a class="code" href="class_vector.html#a2749846490cb6e839d8eefa45a084ea0">_size</a>;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        }</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
+<div class="line"><a name="l00040"></a><span class="lineno"><a class="line" href="class_vector.html#a206c6fe73c4f11806b3833d6b759abdd">   40</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_vector.html#a206c6fe73c4f11806b3833d6b759abdd">insert_back</a>(T * start, T * <a class="code" href="class_vector.html#a522d78335b65262c5683a528eb7a18ff">end</a>)</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        {</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;            <span class="keywordflow">while</span>(start!=<a class="code" href="class_vector.html#a522d78335b65262c5683a528eb7a18ff">end</a>)</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;            {</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;                <a class="code" href="class_vector.html#ae4a3a0f9075635d43be142607fcadf5a">push_back</a>(*(start++));</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;                </div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;            }</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        }</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160; </div>
+<div class="line"><a name="l00049"></a><span class="lineno"><a class="line" href="class_vector.html#abb830982d1f8dd85dc9b51c4aa719ed4">   49</a></span>&#160;        T <a class="code" href="class_vector.html#abb830982d1f8dd85dc9b51c4aa719ed4">operator[]</a>(<span class="keywordtype">int</span> index){ <span class="keywordflow">return</span> <a class="code" href="class_vector.html#a24a8b8fb7de145d66feb7554f8e06297">_begin</a>[index];}</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160; </div>
+<div class="line"><a name="l00051"></a><span class="lineno"><a class="line" href="class_vector.html#aaf55f52a5274ae7a5f3a40de9f292522">   51</a></span>&#160;        <span class="keywordtype">int</span> <a class="code" href="class_vector.html#aaf55f52a5274ae7a5f3a40de9f292522">size</a>(<span class="keywordtype">void</span>){<span class="keywordflow">return</span> <a class="code" href="class_vector.html#a2749846490cb6e839d8eefa45a084ea0">_size</a>;}</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160; </div>
+<div class="line"><a name="l00054"></a><span class="lineno"><a class="line" href="class_vector.html#a0146747d5a92de79de875b12df8ce58e">   54</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_vector.html#a0146747d5a92de79de875b12df8ce58e">reserve</a>(<span class="keywordtype">int</span> new_capacity)</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        {</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;            <span class="keywordflow">if</span>(new_capacity&lt;<a class="code" href="class_vector.html#aa824a020aab305ede64432fa4f6ea9f6">_capacity</a>) <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;            T * tmp_begin = <span class="keyword">new</span> T[new_capacity];</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160; </div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> ptr=0; ptr&lt;=<a class="code" href="class_vector.html#a2749846490cb6e839d8eefa45a084ea0">_size</a>; ptr++) tmp_begin[ptr] = <a class="code" href="class_vector.html#a24a8b8fb7de145d66feb7554f8e06297">_begin</a>[ptr];</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;            </div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;            <span class="keyword">delete</span>[] <a class="code" href="class_vector.html#a24a8b8fb7de145d66feb7554f8e06297">_begin</a>;</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;            <a class="code" href="class_vector.html#a24a8b8fb7de145d66feb7554f8e06297">_begin</a> = tmp_begin;</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;            <a class="code" href="class_vector.html#aa824a020aab305ede64432fa4f6ea9f6">_capacity</a> = new_capacity;</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;        }</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160; </div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160; </div>
+<div class="line"><a name="l00067"></a><span class="lineno"><a class="line" href="class_vector.html#a24a8b8fb7de145d66feb7554f8e06297">   67</a></span>&#160;        T * <a class="code" href="class_vector.html#a24a8b8fb7de145d66feb7554f8e06297">_begin</a>;</div>
+<div class="line"><a name="l00068"></a><span class="lineno"><a class="line" href="class_vector.html#aa824a020aab305ede64432fa4f6ea9f6">   68</a></span>&#160;        <a class="code" href="_vector_8h.html#a91ad9478d81a7aaf2593e8d9c3d06a14">uint</a> <a class="code" href="class_vector.html#aa824a020aab305ede64432fa4f6ea9f6">_capacity</a>;</div>
+<div class="line"><a name="l00069"></a><span class="lineno"><a class="line" href="class_vector.html#a2749846490cb6e839d8eefa45a084ea0">   69</a></span>&#160;        <a class="code" href="_vector_8h.html#a91ad9478d81a7aaf2593e8d9c3d06a14">uint</a> <a class="code" href="class_vector.html#a2749846490cb6e839d8eefa45a084ea0">_size</a>;</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;};</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160; </div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160; </div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;<span class="preprocessor">#endif //__VECTOR_H__</span></div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="aclass_vector_html_a206c6fe73c4f11806b3833d6b759abdd"><div class="ttname"><a href="class_vector.html#a206c6fe73c4f11806b3833d6b759abdd">Vector::insert_back</a></div><div class="ttdeci">void insert_back(T *start, T *end)</div><div class="ttdef"><b>Definition:</b> Vector.h:40</div></div>
+<div class="ttc" id="aclass_vector_html_afd524fac19e6d3d69db5198ffe2952b0"><div class="ttname"><a href="class_vector.html#afd524fac19e6d3d69db5198ffe2952b0">Vector::~Vector</a></div><div class="ttdeci">~Vector()</div><div class="ttdef"><b>Definition:</b> Vector.h:15</div></div>
+<div class="ttc" id="aclass_vector_html_a2749846490cb6e839d8eefa45a084ea0"><div class="ttname"><a href="class_vector.html#a2749846490cb6e839d8eefa45a084ea0">Vector::_size</a></div><div class="ttdeci">uint _size</div><div class="ttdef"><b>Definition:</b> Vector.h:69</div></div>
+<div class="ttc" id="aclass_vector_html_a522d78335b65262c5683a528eb7a18ff"><div class="ttname"><a href="class_vector.html#a522d78335b65262c5683a528eb7a18ff">Vector::end</a></div><div class="ttdeci">T * end() const</div><div class="ttdef"><b>Definition:</b> Vector.h:35</div></div>
+<div class="ttc" id="aclass_vector_html_a0146747d5a92de79de875b12df8ce58e"><div class="ttname"><a href="class_vector.html#a0146747d5a92de79de875b12df8ce58e">Vector::reserve</a></div><div class="ttdeci">void reserve(int new_capacity)</div><div class="ttdef"><b>Definition:</b> Vector.h:54</div></div>
+<div class="ttc" id="a_vector_8h_html_a91ad9478d81a7aaf2593e8d9c3d06a14"><div class="ttname"><a href="_vector_8h.html#a91ad9478d81a7aaf2593e8d9c3d06a14">uint</a></div><div class="ttdeci">unsigned int uint</div><div class="ttdef"><b>Definition:</b> Vector.h:4</div></div>
+<div class="ttc" id="aclass_vector_html_abb830982d1f8dd85dc9b51c4aa719ed4"><div class="ttname"><a href="class_vector.html#abb830982d1f8dd85dc9b51c4aa719ed4">Vector::operator[]</a></div><div class="ttdeci">T operator[](int index)</div><div class="ttdef"><b>Definition:</b> Vector.h:49</div></div>
+<div class="ttc" id="aclass_vector_html_aaf55f52a5274ae7a5f3a40de9f292522"><div class="ttname"><a href="class_vector.html#aaf55f52a5274ae7a5f3a40de9f292522">Vector::size</a></div><div class="ttdeci">int size(void)</div><div class="ttdef"><b>Definition:</b> Vector.h:51</div></div>
+<div class="ttc" id="aclass_vector_html_a24a8b8fb7de145d66feb7554f8e06297"><div class="ttname"><a href="class_vector.html#a24a8b8fb7de145d66feb7554f8e06297">Vector::_begin</a></div><div class="ttdeci">T * _begin</div><div class="ttdef"><b>Definition:</b> Vector.h:67</div></div>
+<div class="ttc" id="aclass_vector_html"><div class="ttname"><a href="class_vector.html">Vector</a></div><div class="ttdef"><b>Definition:</b> Vector.h:8</div></div>
+<div class="ttc" id="aclass_vector_html_a39d6069675db4ecfc1ab81d440da759a"><div class="ttname"><a href="class_vector.html#a39d6069675db4ecfc1ab81d440da759a">Vector::Vector</a></div><div class="ttdeci">Vector()</div><div class="ttdef"><b>Definition:</b> Vector.h:10</div></div>
+<div class="ttc" id="aclass_vector_html_a790b0fff909e8799c059c374ce3762e4"><div class="ttname"><a href="class_vector.html#a790b0fff909e8799c059c374ce3762e4">Vector::begin</a></div><div class="ttdeci">T * begin() const</div><div class="ttdef"><b>Definition:</b> Vector.h:30</div></div>
+<div class="ttc" id="aclass_vector_html_ae4a3a0f9075635d43be142607fcadf5a"><div class="ttname"><a href="class_vector.html#ae4a3a0f9075635d43be142607fcadf5a">Vector::push_back</a></div><div class="ttdeci">void push_back(T val)</div><div class="ttdef"><b>Definition:</b> Vector.h:20</div></div>
+<div class="ttc" id="a_vector_8h_html_a7ab9c9406d6e8432e3786bd89ec79695"><div class="ttname"><a href="_vector_8h.html#a7ab9c9406d6e8432e3786bd89ec79695">INIT_SIZE</a></div><div class="ttdeci">#define INIT_SIZE</div><div class="ttdef"><b>Definition:</b> Vector.h:3</div></div>
+<div class="ttc" id="aclass_vector_html_aa824a020aab305ede64432fa4f6ea9f6"><div class="ttname"><a href="class_vector.html#aa824a020aab305ede64432fa4f6ea9f6">Vector::_capacity</a></div><div class="ttdeci">uint _capacity</div><div class="ttdef"><b>Definition:</b> Vector.h:68</div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Généré par &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.18
+</small></address>
+</body>
+</html>

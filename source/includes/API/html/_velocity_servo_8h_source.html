@@ -1,0 +1,147 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.18"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Documentation Cpp Arduino:  Fichier source de common/VelocityServo.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="logo_arduino.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Documentation Cpp Arduino
+   &#160;<span id="projectnumber">1.1</span>
+   </div>
+   <div id="projectbrief">Bienvenue dans la documentation Cpp (arduino) du club robot</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.8.18 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Recherche');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_4574b85c0abcef1e41f0bb02fb9bfbe2.html">common</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">VelocityServo.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_velocity_servo_8h.html">Aller à la documentation de ce fichier.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef __VELOCITYSERVO_H__</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define __VELOCITYSERVO_H__</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_clock_8h.html">Clock.h</a>&quot;</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &lt;Servo.h&gt;</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_periodic_process_8h.html">PeriodicProcess.h</a>&quot;</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="class_velocity_servo.html">   14</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_velocity_servo.html">VelocityServo</a> : <span class="keyword">public</span> <a class="code" href="class_periodic_process.html">PeriodicProcess</a>{</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160; </div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="keyword">private</span>: </div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
+<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="class_velocity_servo.html#a602923bd0e2c774dc9713e7c706857b3">   18</a></span>&#160;    Servo <a class="code" href="class_velocity_servo.html#a602923bd0e2c774dc9713e7c706857b3">m_servo</a>;</div>
+<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="class_velocity_servo.html#aa4996b77a05817964933ee85bd63a10b">   19</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="class_velocity_servo.html#aa4996b77a05817964933ee85bd63a10b">m_setpoint</a>;</div>
+<div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="class_velocity_servo.html#aea823471464211386531181436d55520">   20</a></span>&#160;    <span class="keywordtype">float</span> <a class="code" href="class_velocity_servo.html#aea823471464211386531181436d55520">m_velocity</a>;</div>
+<div class="line"><a name="l00021"></a><span class="lineno"><a class="line" href="class_velocity_servo.html#ac70073e417b3399c8452819a9b09e6c1">   21</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="class_velocity_servo.html#ac70073e417b3399c8452819a9b09e6c1">m_startpoint</a>;</div>
+<div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="class_velocity_servo.html#aec2bf36525564b3912dc0e8bd561f008">   22</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="class_velocity_servo.html#aec2bf36525564b3912dc0e8bd561f008">m_dir</a>;</div>
+<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="class_velocity_servo.html#aacf8927bd04b76909af3f84df03c908f">   23</a></span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="class_velocity_servo.html#aacf8927bd04b76909af3f84df03c908f">m_arrived</a>; </div>
+<div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="class_velocity_servo.html#a6ba6731a1f8f91b65cc90935cbcbbed2">   24</a></span>&#160;    <a class="code" href="class_clock.html">Clock</a> <a class="code" href="class_velocity_servo.html#a6ba6731a1f8f91b65cc90935cbcbbed2">m_clock</a>;</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; </div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="keyword">public</span>: </div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    </div>
+<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="class_velocity_servo.html#a29b9dc40dde739a9083db16ed0d9605d">   28</a></span>&#160;    <a class="code" href="class_velocity_servo.html#a29b9dc40dde739a9083db16ed0d9605d">VelocityServo</a>(){<a class="code" href="class_velocity_servo.html#aea823471464211386531181436d55520">m_velocity</a> = 100;}</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160; </div>
+<div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="class_velocity_servo.html#ac84c6d1b65ace460c6db6378efffc69a">   33</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_velocity_servo.html#ac84c6d1b65ace460c6db6378efffc69a">setVelocity</a>(<span class="keywordtype">float</span> vel){<a class="code" href="class_velocity_servo.html#aea823471464211386531181436d55520">m_velocity</a> = vel;}</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; </div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_velocity_servo.html#aa6e946773a200dc949ba28bd98b8caec">Velocitywrite</a>(<span class="keywordtype">int</span> setpoint);</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    </div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_velocity_servo.html#a125b90ca3c1befe13d78012fe8d26182">attach</a>(<span class="keywordtype">int</span> pin);</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160; </div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_velocity_servo.html#a150eb4f16ded343bba92326b01ea1bd6">detach</a>();</div>
+<div class="line"><a name="l00048"></a><span class="lineno"><a class="line" href="class_velocity_servo.html#a721f4b1d48bb253bb07ca9099bea325d">   48</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_velocity_servo.html#a721f4b1d48bb253bb07ca9099bea325d">write</a>(<span class="keywordtype">int</span> setpoint){<a class="code" href="class_velocity_servo.html#aacf8927bd04b76909af3f84df03c908f">m_arrived</a> = <span class="keyword">true</span>; <a class="code" href="class_velocity_servo.html#a602923bd0e2c774dc9713e7c706857b3">m_servo</a>.write(setpoint); }</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160; </div>
+<div class="line"><a name="l00053"></a><span class="lineno"><a class="line" href="class_velocity_servo.html#a9010d92d22af12f0df223d0f3f716478">   53</a></span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="class_velocity_servo.html#a9010d92d22af12f0df223d0f3f716478">attached</a>(){<span class="keywordflow">return</span> <a class="code" href="class_velocity_servo.html#a602923bd0e2c774dc9713e7c706857b3">m_servo</a>.attached();}</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160; </div>
+<div class="line"><a name="l00058"></a><span class="lineno"><a class="line" href="class_velocity_servo.html#a69dd156c85f9d16ce5a5ca7094c714e4">   58</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="class_velocity_servo.html#a69dd156c85f9d16ce5a5ca7094c714e4">read</a>(){<span class="keywordflow">return</span> <a class="code" href="class_velocity_servo.html#a602923bd0e2c774dc9713e7c706857b3">m_servo</a>.read();}</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160; </div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;<span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    </div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_velocity_servo.html#ad0c56c1954c81336c53e01841a8aeffe">process</a>(<span class="keywordtype">float</span> timestep);</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    </div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;};</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160; </div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;<span class="preprocessor">#endif</span></div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="aclass_velocity_servo_html_a9010d92d22af12f0df223d0f3f716478"><div class="ttname"><a href="class_velocity_servo.html#a9010d92d22af12f0df223d0f3f716478">VelocityServo::attached</a></div><div class="ttdeci">bool attached()</div><div class="ttdoc">Permet de déplacer le servomoteur à vitesse normale (~Vitesse max)</div><div class="ttdef"><b>Definition:</b> VelocityServo.h:53</div></div>
+<div class="ttc" id="aclass_velocity_servo_html_a69dd156c85f9d16ce5a5ca7094c714e4"><div class="ttname"><a href="class_velocity_servo.html#a69dd156c85f9d16ce5a5ca7094c714e4">VelocityServo::read</a></div><div class="ttdeci">int read()</div><div class="ttdoc">renvoie la dernière position envoyée au servo (seulement si le servo est &quot;attached&quot;)</div><div class="ttdef"><b>Definition:</b> VelocityServo.h:58</div></div>
+<div class="ttc" id="aclass_velocity_servo_html_aea823471464211386531181436d55520"><div class="ttname"><a href="class_velocity_servo.html#aea823471464211386531181436d55520">VelocityServo::m_velocity</a></div><div class="ttdeci">float m_velocity</div><div class="ttdef"><b>Definition:</b> VelocityServo.h:20</div></div>
+<div class="ttc" id="aclass_velocity_servo_html_aec2bf36525564b3912dc0e8bd561f008"><div class="ttname"><a href="class_velocity_servo.html#aec2bf36525564b3912dc0e8bd561f008">VelocityServo::m_dir</a></div><div class="ttdeci">int m_dir</div><div class="ttdef"><b>Definition:</b> VelocityServo.h:22</div></div>
+<div class="ttc" id="aclass_velocity_servo_html_a125b90ca3c1befe13d78012fe8d26182"><div class="ttname"><a href="class_velocity_servo.html#a125b90ca3c1befe13d78012fe8d26182">VelocityServo::attach</a></div><div class="ttdeci">void attach(int pin)</div><div class="ttdoc">Définit le pin sur lequel est connecté le serovmoteur.</div><div class="ttdef"><b>Definition:</b> VelocityServo.cpp:34</div></div>
+<div class="ttc" id="aclass_periodic_process_html"><div class="ttname"><a href="class_periodic_process.html">PeriodicProcess</a></div><div class="ttdoc">Classe à implémenter pour gérer les appels dans la loop.</div><div class="ttdef"><b>Definition:</b> PeriodicProcess.h:16</div></div>
+<div class="ttc" id="a_periodic_process_8h_html"><div class="ttname"><a href="_periodic_process_8h.html">PeriodicProcess.h</a></div></div>
+<div class="ttc" id="aclass_velocity_servo_html_aa6e946773a200dc949ba28bd98b8caec"><div class="ttname"><a href="class_velocity_servo.html#aa6e946773a200dc949ba28bd98b8caec">VelocityServo::Velocitywrite</a></div><div class="ttdeci">void Velocitywrite(int setpoint)</div><div class="ttdoc">Déplace le servomoteur à la vitesse réglée (defaut = 360°/s)</div><div class="ttdef"><b>Definition:</b> VelocityServo.cpp:5</div></div>
+<div class="ttc" id="aclass_velocity_servo_html_a29b9dc40dde739a9083db16ed0d9605d"><div class="ttname"><a href="class_velocity_servo.html#a29b9dc40dde739a9083db16ed0d9605d">VelocityServo::VelocityServo</a></div><div class="ttdeci">VelocityServo()</div><div class="ttdef"><b>Definition:</b> VelocityServo.h:28</div></div>
+<div class="ttc" id="aclass_velocity_servo_html_aacf8927bd04b76909af3f84df03c908f"><div class="ttname"><a href="class_velocity_servo.html#aacf8927bd04b76909af3f84df03c908f">VelocityServo::m_arrived</a></div><div class="ttdeci">bool m_arrived</div><div class="ttdef"><b>Definition:</b> VelocityServo.h:23</div></div>
+<div class="ttc" id="aclass_clock_html"><div class="ttname"><a href="class_clock.html">Clock</a></div><div class="ttdoc">Utilitaire pour gérer le temps dans vos programmes Arduino.</div><div class="ttdef"><b>Definition:</b> Clock.h:14</div></div>
+<div class="ttc" id="aclass_velocity_servo_html_a150eb4f16ded343bba92326b01ea1bd6"><div class="ttname"><a href="class_velocity_servo.html#a150eb4f16ded343bba92326b01ea1bd6">VelocityServo::detach</a></div><div class="ttdeci">void detach()</div><div class="ttdoc">Fonction réciproque de attach() (permet par exemple d'avoir un servomoteur en roue libre)</div><div class="ttdef"><b>Definition:</b> VelocityServo.cpp:39</div></div>
+<div class="ttc" id="aclass_velocity_servo_html_a721f4b1d48bb253bb07ca9099bea325d"><div class="ttname"><a href="class_velocity_servo.html#a721f4b1d48bb253bb07ca9099bea325d">VelocityServo::write</a></div><div class="ttdeci">void write(int setpoint)</div><div class="ttdef"><b>Definition:</b> VelocityServo.h:48</div></div>
+<div class="ttc" id="aclass_velocity_servo_html_aa4996b77a05817964933ee85bd63a10b"><div class="ttname"><a href="class_velocity_servo.html#aa4996b77a05817964933ee85bd63a10b">VelocityServo::m_setpoint</a></div><div class="ttdeci">int m_setpoint</div><div class="ttdef"><b>Definition:</b> VelocityServo.h:19</div></div>
+<div class="ttc" id="aclass_velocity_servo_html_ad0c56c1954c81336c53e01841a8aeffe"><div class="ttname"><a href="class_velocity_servo.html#ad0c56c1954c81336c53e01841a8aeffe">VelocityServo::process</a></div><div class="ttdeci">virtual void process(float timestep)</div><div class="ttdoc">Méthode à implémenter obligatoirement pour hériter de PeriodicProcess.</div><div class="ttdef"><b>Definition:</b> VelocityServo.cpp:18</div></div>
+<div class="ttc" id="aclass_velocity_servo_html_a602923bd0e2c774dc9713e7c706857b3"><div class="ttname"><a href="class_velocity_servo.html#a602923bd0e2c774dc9713e7c706857b3">VelocityServo::m_servo</a></div><div class="ttdeci">Servo m_servo</div><div class="ttdef"><b>Definition:</b> VelocityServo.h:18</div></div>
+<div class="ttc" id="aclass_velocity_servo_html_a6ba6731a1f8f91b65cc90935cbcbbed2"><div class="ttname"><a href="class_velocity_servo.html#a6ba6731a1f8f91b65cc90935cbcbbed2">VelocityServo::m_clock</a></div><div class="ttdeci">Clock m_clock</div><div class="ttdef"><b>Definition:</b> VelocityServo.h:24</div></div>
+<div class="ttc" id="aclass_velocity_servo_html"><div class="ttname"><a href="class_velocity_servo.html">VelocityServo</a></div><div class="ttdoc">Objet permettant de controller la vitesse d'un servomoteur.</div><div class="ttdef"><b>Definition:</b> VelocityServo.h:14</div></div>
+<div class="ttc" id="a_clock_8h_html"><div class="ttname"><a href="_clock_8h.html">Clock.h</a></div></div>
+<div class="ttc" id="aclass_velocity_servo_html_ac70073e417b3399c8452819a9b09e6c1"><div class="ttname"><a href="class_velocity_servo.html#ac70073e417b3399c8452819a9b09e6c1">VelocityServo::m_startpoint</a></div><div class="ttdeci">int m_startpoint</div><div class="ttdef"><b>Definition:</b> VelocityServo.h:21</div></div>
+<div class="ttc" id="aclass_velocity_servo_html_ac84c6d1b65ace460c6db6378efffc69a"><div class="ttname"><a href="class_velocity_servo.html#ac84c6d1b65ace460c6db6378efffc69a">VelocityServo::setVelocity</a></div><div class="ttdeci">void setVelocity(float vel)</div><div class="ttdoc">Permet de changer la vitesse du servomoteur.</div><div class="ttdef"><b>Definition:</b> VelocityServo.h:33</div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Généré par &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.18
+</small></address>
+</body>
+</html>

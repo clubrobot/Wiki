@@ -1,0 +1,146 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.18"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Documentation Cpp Arduino:  Fichier source de common/SensorListener.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="logo_arduino.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Documentation Cpp Arduino
+   &#160;<span id="projectnumber">1.1</span>
+   </div>
+   <div id="projectbrief">Bienvenue dans la documentation Cpp (arduino) du club robot</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.8.18 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Recherche');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_4574b85c0abcef1e41f0bb02fb9bfbe2.html">common</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">SensorListener.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_sensor_listener_8h.html">Aller à la documentation de ce fichier.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef __SENSOR_LISTENER_H__</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define __SENSOR_LISTENER_H__</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_ultrasonic_sensor_8h.html">UltrasonicSensor.h</a>&quot;</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_clock_8h.html">Clock.h</a>&quot;</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_queue_array_8h.html">QueueArray.h</a>&quot;</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_periodic_process_8h.html">PeriodicProcess.h</a>&quot;</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160; </div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#define LISTENER_MAX_MESURE 25</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno"><a class="line" href="_sensor_listener_8h.html#a6a4e64f9157c5800cdc5aff2968f0dbd">    9</a></span>&#160;<span class="preprocessor">#define LISTENER_MAX_HISTORY 4</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno"><a class="line" href="_sensor_listener_8h.html#a73fc5bd02a222a41a9bbce9efb68aaee">   10</a></span>&#160; </div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160; </div>
+<div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="class_sensor_listener.html">   12</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_sensor_listener.html">SensorListener</a> : <span class="keyword">public</span> <a class="code" href="class_periodic_process.html">PeriodicProcess</a></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;{</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;        <a class="code" href="class_sensor_listener.html#aa6bf347db90b99c9935f13b897c435c4">SensorListener</a>();</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160; </div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_sensor_listener.html#a143a4bf8aafb5ceb85f4b591cb9d0471">attach</a>(<a class="code" href="class_ultrasonic_sensor.html">UltrasonicSensor</a>* sensor, <span class="keywordtype">int</span> timestep);</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160; </div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_sensor_listener.html#a9871485da571a46f3df90a029b353a66">process</a>(<span class="keywordtype">float</span> timestep);</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;        <span class="keywordtype">float</span> <a class="code" href="class_sensor_listener.html#af06824ae01e220da8802478f155c38ff">getStd</a>(<span class="keywordtype">int</span> delta);</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;        <span class="keywordtype">float</span> <a class="code" href="class_sensor_listener.html#a581187debf3b52d0ab5854965c7e723e">getVar</a>(<span class="keywordtype">int</span> delta);</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; </div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    </div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_sensor_listener.html#a92bf2906004d58e04d111a2194ab9e7d">storeStd</a>(<span class="keywordtype">float</span> std);</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_sensor_listener.html#ae7ab7f74b549a0352ab54a3783d235f3">storeVar</a>(<span class="keywordtype">float</span> var);</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
+<div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="class_sensor_listener.html#af56b08973cec234a363a866e70667711">   30</a></span>&#160;        <a class="code" href="class_ultrasonic_sensor.html">UltrasonicSensor</a>* <a class="code" href="class_sensor_listener.html#af56b08973cec234a363a866e70667711">m_sensor</a>;</div>
+<div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="class_sensor_listener.html#a7992f15395bfc0334a89887d287c1453">   31</a></span>&#160;        <span class="keywordtype">int</span> <a class="code" href="class_sensor_listener.html#a7992f15395bfc0334a89887d287c1453">m_interTimestep</a>; <span class="comment">// ms</span></div>
+<div class="line"><a name="l00032"></a><span class="lineno"><a class="line" href="class_sensor_listener.html#a45beb972ae6696984cb992ac2ccba278">   32</a></span>&#160;        <a class="code" href="class_clock.html">Clock</a> <a class="code" href="class_sensor_listener.html#a45beb972ae6696984cb992ac2ccba278">m_internClock</a>;</div>
+<div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="class_sensor_listener.html#a33203b5fe8159fe7826d7d5681eedb1e">   33</a></span>&#160;        <a class="code" href="class_queue_array.html">QueueArray&lt;float&gt;</a> <a class="code" href="class_sensor_listener.html#a33203b5fe8159fe7826d7d5681eedb1e">m_mesures</a>;</div>
+<div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="class_sensor_listener.html#a1f94487320204a5bc8d68c52fcc809e5">   34</a></span>&#160;        <span class="keywordtype">float</span> <a class="code" href="class_sensor_listener.html#a1f94487320204a5bc8d68c52fcc809e5">m_oldStd</a>[<a class="code" href="_sensor_listener_8h.html#a73fc5bd02a222a41a9bbce9efb68aaee">LISTENER_MAX_HISTORY</a>];</div>
+<div class="line"><a name="l00035"></a><span class="lineno"><a class="line" href="class_sensor_listener.html#a1859124b9cdf6fe161c31bf9cde13d1a">   35</a></span>&#160;        <span class="keywordtype">float</span> <a class="code" href="class_sensor_listener.html#a1859124b9cdf6fe161c31bf9cde13d1a">m_oldVar</a>[<a class="code" href="_sensor_listener_8h.html#a73fc5bd02a222a41a9bbce9efb68aaee">LISTENER_MAX_HISTORY</a>];</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; </div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160; </div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;};</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="preprocessor">#endif</span></div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="aclass_sensor_listener_html_a581187debf3b52d0ab5854965c7e723e"><div class="ttname"><a href="class_sensor_listener.html#a581187debf3b52d0ab5854965c7e723e">SensorListener::getVar</a></div><div class="ttdeci">float getVar(int delta)</div><div class="ttdef"><b>Definition:</b> SensorListener.cpp:82</div></div>
+<div class="ttc" id="aclass_ultrasonic_sensor_html"><div class="ttname"><a href="class_ultrasonic_sensor.html">UltrasonicSensor</a></div><div class="ttdoc">Permet d'utiliser des capteurs de distance ulrasons.</div><div class="ttdef"><b>Definition:</b> UltrasonicSensor.h:129</div></div>
+<div class="ttc" id="aclass_periodic_process_html"><div class="ttname"><a href="class_periodic_process.html">PeriodicProcess</a></div><div class="ttdoc">Classe à implémenter pour gérer les appels dans la loop.</div><div class="ttdef"><b>Definition:</b> PeriodicProcess.h:16</div></div>
+<div class="ttc" id="a_queue_array_8h_html"><div class="ttname"><a href="_queue_array_8h.html">QueueArray.h</a></div></div>
+<div class="ttc" id="aclass_sensor_listener_html_ae7ab7f74b549a0352ab54a3783d235f3"><div class="ttname"><a href="class_sensor_listener.html#ae7ab7f74b549a0352ab54a3783d235f3">SensorListener::storeVar</a></div><div class="ttdeci">void storeVar(float var)</div><div class="ttdef"><b>Definition:</b> SensorListener.cpp:71</div></div>
+<div class="ttc" id="aclass_sensor_listener_html_a7992f15395bfc0334a89887d287c1453"><div class="ttname"><a href="class_sensor_listener.html#a7992f15395bfc0334a89887d287c1453">SensorListener::m_interTimestep</a></div><div class="ttdeci">int m_interTimestep</div><div class="ttdef"><b>Definition:</b> SensorListener.h:31</div></div>
+<div class="ttc" id="aclass_sensor_listener_html_a1f94487320204a5bc8d68c52fcc809e5"><div class="ttname"><a href="class_sensor_listener.html#a1f94487320204a5bc8d68c52fcc809e5">SensorListener::m_oldStd</a></div><div class="ttdeci">float m_oldStd[LISTENER_MAX_HISTORY]</div><div class="ttdef"><b>Definition:</b> SensorListener.h:34</div></div>
+<div class="ttc" id="a_periodic_process_8h_html"><div class="ttname"><a href="_periodic_process_8h.html">PeriodicProcess.h</a></div></div>
+<div class="ttc" id="aclass_sensor_listener_html_af56b08973cec234a363a866e70667711"><div class="ttname"><a href="class_sensor_listener.html#af56b08973cec234a363a866e70667711">SensorListener::m_sensor</a></div><div class="ttdeci">UltrasonicSensor * m_sensor</div><div class="ttdef"><b>Definition:</b> SensorListener.h:30</div></div>
+<div class="ttc" id="aclass_clock_html"><div class="ttname"><a href="class_clock.html">Clock</a></div><div class="ttdoc">Utilitaire pour gérer le temps dans vos programmes Arduino.</div><div class="ttdef"><b>Definition:</b> Clock.h:14</div></div>
+<div class="ttc" id="aclass_sensor_listener_html_a92bf2906004d58e04d111a2194ab9e7d"><div class="ttname"><a href="class_sensor_listener.html#a92bf2906004d58e04d111a2194ab9e7d">SensorListener::storeStd</a></div><div class="ttdeci">void storeStd(float std)</div><div class="ttdef"><b>Definition:</b> SensorListener.cpp:62</div></div>
+<div class="ttc" id="aclass_sensor_listener_html_a1859124b9cdf6fe161c31bf9cde13d1a"><div class="ttname"><a href="class_sensor_listener.html#a1859124b9cdf6fe161c31bf9cde13d1a">SensorListener::m_oldVar</a></div><div class="ttdeci">float m_oldVar[LISTENER_MAX_HISTORY]</div><div class="ttdef"><b>Definition:</b> SensorListener.h:35</div></div>
+<div class="ttc" id="aclass_sensor_listener_html"><div class="ttname"><a href="class_sensor_listener.html">SensorListener</a></div><div class="ttdef"><b>Definition:</b> SensorListener.h:13</div></div>
+<div class="ttc" id="aclass_sensor_listener_html_af06824ae01e220da8802478f155c38ff"><div class="ttname"><a href="class_sensor_listener.html#af06824ae01e220da8802478f155c38ff">SensorListener::getStd</a></div><div class="ttdeci">float getStd(int delta)</div><div class="ttdef"><b>Definition:</b> SensorListener.cpp:80</div></div>
+<div class="ttc" id="aclass_sensor_listener_html_a143a4bf8aafb5ceb85f4b591cb9d0471"><div class="ttname"><a href="class_sensor_listener.html#a143a4bf8aafb5ceb85f4b591cb9d0471">SensorListener::attach</a></div><div class="ttdeci">void attach(UltrasonicSensor *sensor, int timestep)</div><div class="ttdef"><b>Definition:</b> SensorListener.cpp:10</div></div>
+<div class="ttc" id="aclass_sensor_listener_html_a33203b5fe8159fe7826d7d5681eedb1e"><div class="ttname"><a href="class_sensor_listener.html#a33203b5fe8159fe7826d7d5681eedb1e">SensorListener::m_mesures</a></div><div class="ttdeci">QueueArray&lt; float &gt; m_mesures</div><div class="ttdef"><b>Definition:</b> SensorListener.h:33</div></div>
+<div class="ttc" id="aclass_sensor_listener_html_aa6bf347db90b99c9935f13b897c435c4"><div class="ttname"><a href="class_sensor_listener.html#aa6bf347db90b99c9935f13b897c435c4">SensorListener::SensorListener</a></div><div class="ttdeci">SensorListener()</div><div class="ttdef"><b>Definition:</b> SensorListener.cpp:3</div></div>
+<div class="ttc" id="a_ultrasonic_sensor_8h_html"><div class="ttname"><a href="_ultrasonic_sensor_8h.html">UltrasonicSensor.h</a></div></div>
+<div class="ttc" id="a_clock_8h_html"><div class="ttname"><a href="_clock_8h.html">Clock.h</a></div></div>
+<div class="ttc" id="a_sensor_listener_8h_html_a73fc5bd02a222a41a9bbce9efb68aaee"><div class="ttname"><a href="_sensor_listener_8h.html#a73fc5bd02a222a41a9bbce9efb68aaee">LISTENER_MAX_HISTORY</a></div><div class="ttdeci">#define LISTENER_MAX_HISTORY</div><div class="ttdef"><b>Definition:</b> SensorListener.h:9</div></div>
+<div class="ttc" id="aclass_queue_array_html"><div class="ttname"><a href="class_queue_array.html">QueueArray&lt; float &gt;</a></div></div>
+<div class="ttc" id="aclass_sensor_listener_html_a45beb972ae6696984cb992ac2ccba278"><div class="ttname"><a href="class_sensor_listener.html#a45beb972ae6696984cb992ac2ccba278">SensorListener::m_internClock</a></div><div class="ttdeci">Clock m_internClock</div><div class="ttdef"><b>Definition:</b> SensorListener.h:32</div></div>
+<div class="ttc" id="aclass_sensor_listener_html_a9871485da571a46f3df90a029b353a66"><div class="ttname"><a href="class_sensor_listener.html#a9871485da571a46f3df90a029b353a66">SensorListener::process</a></div><div class="ttdeci">void process(float timestep)</div><div class="ttdoc">Méthode à implémenter obligatoirement pour hériter de PeriodicProcess.</div><div class="ttdef"><b>Definition:</b> SensorListener.cpp:16</div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Généré par &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.18
+</small></address>
+</body>
+</html>

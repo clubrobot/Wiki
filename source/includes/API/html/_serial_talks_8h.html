@@ -1,0 +1,639 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.18"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Documentation Cpp Arduino: Référence du fichier common/SerialTalks.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="logo_arduino.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Documentation Cpp Arduino
+   &#160;<span id="projectnumber">1.1</span>
+   </div>
+   <div id="projectbrief">Bienvenue dans la documentation Cpp (arduino) du club robot</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.8.18 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Recherche');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_4574b85c0abcef1e41f0bb02fb9bfbe2.html">common</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">Classes</a> &#124;
+<a href="#define-members">Macros</a> &#124;
+<a href="#var-members">Variables</a>  </div>
+  <div class="headertitle">
+<div class="title">Référence du fichier SerialTalks.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &lt;Arduino.h&gt;</code><br />
+<code>#include &quot;<a class="el" href="serialutils_8h_source.html">serialutils.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="_c_r_c16_8h_source.html">CRC16.h</a>&quot;</code><br />
+</div>
+<p><a href="_serial_talks_8h_source.html">Aller au code source de ce fichier.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_serial_talks.html">SerialTalks</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Object de communication serial avec un ordinateur.  <a href="class_serial_talks.html#details">Plus de détails...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_serial_talks_1_1ostream.html">SerialTalks::ostream</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stream virtuel pour les erreurs et autre. est un outils pour permettre de mieux transmettre les erreurs rencontrées et les STD::OUT.  <a href="class_serial_talks_1_1ostream.html#details">Plus de détails...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+Macros</h2></td></tr>
+<tr class="memitem:a54ac2ddd5c85a3b5bb2469ad60a2d903"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_serial_talks_8h.html#a54ac2ddd5c85a3b5bb2469ad60a2d903">SERIALTALKS_BAUDRATE</a>&#160;&#160;&#160;115200</td></tr>
+<tr class="separator:a54ac2ddd5c85a3b5bb2469ad60a2d903"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a11d366b3979b2105dcd2a2c7c9329494"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_serial_talks_8h.html#a11d366b3979b2105dcd2a2c7c9329494">SERIALTALKS_INPUT_BUFFER_SIZE</a>&#160;&#160;&#160;64</td></tr>
+<tr class="separator:a11d366b3979b2105dcd2a2c7c9329494"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa9b06aaa07f7352b6039e4c16d24c4b2"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_serial_talks_8h.html#aa9b06aaa07f7352b6039e4c16d24c4b2">SERIALTALKS_OUTPUT_BUFFER_SIZE</a>&#160;&#160;&#160;64</td></tr>
+<tr class="separator:aa9b06aaa07f7352b6039e4c16d24c4b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad8d4edff1ced67e2bec1902168ce8884"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_serial_talks_8h.html#ad8d4edff1ced67e2bec1902168ce8884">SERIALTALKS_UUID_ADDRESS</a>&#160;&#160;&#160;0x0000000000</td></tr>
+<tr class="separator:ad8d4edff1ced67e2bec1902168ce8884"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af4423a1f3526cac7c514d159b76e87d0"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_serial_talks_8h.html#af4423a1f3526cac7c514d159b76e87d0">SERIALTALKS_UUID_LENGTH</a>&#160;&#160;&#160;32</td></tr>
+<tr class="separator:af4423a1f3526cac7c514d159b76e87d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adf6c57366acf2dbe6a1f464a7ec77041"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_serial_talks_8h.html#adf6c57366acf2dbe6a1f464a7ec77041">SERIALTALKS_MAX_PROCESSING</a>&#160;&#160;&#160;0x4</td></tr>
+<tr class="separator:adf6c57366acf2dbe6a1f464a7ec77041"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6c244e1c01fe09474f4c7665847e9deb"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_serial_talks_8h.html#a6c244e1c01fe09474f4c7665847e9deb">SERIALTALKS_MAX_OPCODE</a>&#160;&#160;&#160;0x20</td></tr>
+<tr class="separator:a6c244e1c01fe09474f4c7665847e9deb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1a21998925b3b6ce25bfb0b57f8a84cd"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_serial_talks_8h.html#a1a21998925b3b6ce25bfb0b57f8a84cd">SERIALTALKS_MASTER_BYTE</a>&#160;&#160;&#160;'R'</td></tr>
+<tr class="separator:a1a21998925b3b6ce25bfb0b57f8a84cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a863c7c8d86704679090a021c308fe9e4"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_serial_talks_8h.html#a863c7c8d86704679090a021c308fe9e4">SERIALTALKS_SLAVE_BYTE</a>&#160;&#160;&#160;'A'</td></tr>
+<tr class="separator:a863c7c8d86704679090a021c308fe9e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aac69fae21d2a4ea7e5db5a2fa6dad23d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_serial_talks_8h.html#aac69fae21d2a4ea7e5db5a2fa6dad23d">SERIALTALKS_DEFAULT_UUID_LENGTH</a>&#160;&#160;&#160;9</td></tr>
+<tr class="separator:aac69fae21d2a4ea7e5db5a2fa6dad23d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8b72a9684c436281663c58d5f77cf039"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_serial_talks_8h.html#a8b72a9684c436281663c58d5f77cf039">SERIALTALKS_RESEVED_OPCODE_0</a>&#160;&#160;&#160;0X0</td></tr>
+<tr class="separator:a8b72a9684c436281663c58d5f77cf039"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad6303eb67358625988f73f906b199fd9"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_serial_talks_8h.html#ad6303eb67358625988f73f906b199fd9">SERIALTALKS_RESEVED_OPCODE_1</a>&#160;&#160;&#160;0X1</td></tr>
+<tr class="separator:ad6303eb67358625988f73f906b199fd9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7af6cf5ebfabac0e12b42ca0d57c89b0"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_serial_talks_8h.html#a7af6cf5ebfabac0e12b42ca0d57c89b0">SERIALTALKS_RESEVED_OPCODE_2</a>&#160;&#160;&#160;0X2</td></tr>
+<tr class="separator:a7af6cf5ebfabac0e12b42ca0d57c89b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad23fd1bd10f3b85a948343290b423a4e"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_serial_talks_8h.html#ad23fd1bd10f3b85a948343290b423a4e">SERIALTALKS_RESEVED_OPCODE_3</a>&#160;&#160;&#160;0X3</td></tr>
+<tr class="separator:ad23fd1bd10f3b85a948343290b423a4e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2c45bb4bfe45c262a123bcb38340f739"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_serial_talks_8h.html#a2c45bb4bfe45c262a123bcb38340f739">SERIALTALKS_RESEVED_OPCODE_4</a>&#160;&#160;&#160;0X4</td></tr>
+<tr class="separator:a2c45bb4bfe45c262a123bcb38340f739"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaf69acb4f96ec9b21ab7148ff846ae8c"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_serial_talks_8h.html#aaf69acb4f96ec9b21ab7148ff846ae8c">SERIALTALKS_RESEVED_OPCODE_5</a>&#160;&#160;&#160;0X5</td></tr>
+<tr class="separator:aaf69acb4f96ec9b21ab7148ff846ae8c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac65ca73e7b8e87d43dc0702308e32ddd"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_serial_talks_8h.html#ac65ca73e7b8e87d43dc0702308e32ddd">SERIALTALKS_RESEVED_OPCODE_6</a>&#160;&#160;&#160;0X6</td></tr>
+<tr class="separator:ac65ca73e7b8e87d43dc0702308e32ddd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2f6488c1511134818675017ca81723bf"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_serial_talks_8h.html#a2f6488c1511134818675017ca81723bf">SERIALTALKS_RESEVED_OPCODE_7</a>&#160;&#160;&#160;0X7</td></tr>
+<tr class="separator:a2f6488c1511134818675017ca81723bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6d2b3e76e20847098fb2f2e42b965f13"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_serial_talks_8h.html#a6d2b3e76e20847098fb2f2e42b965f13">SERIALTALKS_RESEVED_OPCODE_8</a>&#160;&#160;&#160;0X8</td></tr>
+<tr class="separator:a6d2b3e76e20847098fb2f2e42b965f13"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeb923c4d0d545501a4b45d0b719cb5d9"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_serial_talks_8h.html#aeb923c4d0d545501a4b45d0b719cb5d9">SERIALTALKS_RESEVED_OPCODE_9</a>&#160;&#160;&#160;0X9</td></tr>
+<tr class="separator:aeb923c4d0d545501a4b45d0b719cb5d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab336378d0cc6754ffaed1451ec5e6f68"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_serial_talks_8h.html#ab336378d0cc6754ffaed1451ec5e6f68">SERIALTALKS_PING_OPCODE</a>&#160;&#160;&#160;(<a class="el" href="_serial_talks_8h.html#a8b72a9684c436281663c58d5f77cf039">SERIALTALKS_RESEVED_OPCODE_0</a>)</td></tr>
+<tr class="separator:ab336378d0cc6754ffaed1451ec5e6f68"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae6699bf7156ea8d801425762ecb2bd74"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_serial_talks_8h.html#ae6699bf7156ea8d801425762ecb2bd74">SERIALTALKS_GETUUID_OPCODE</a>&#160;&#160;&#160;(<a class="el" href="_serial_talks_8h.html#ad6303eb67358625988f73f906b199fd9">SERIALTALKS_RESEVED_OPCODE_1</a>)</td></tr>
+<tr class="separator:ae6699bf7156ea8d801425762ecb2bd74"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab705110647a7f21d0f73ea410b0d612f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_serial_talks_8h.html#ab705110647a7f21d0f73ea410b0d612f">SERIALTALKS_SETUUID_OPCODE</a>&#160;&#160;&#160;(<a class="el" href="_serial_talks_8h.html#a7af6cf5ebfabac0e12b42ca0d57c89b0">SERIALTALKS_RESEVED_OPCODE_2</a>)</td></tr>
+<tr class="separator:ab705110647a7f21d0f73ea410b0d612f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1e9991a5e0f32d0853abf868aa1efd6d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_serial_talks_8h.html#a1e9991a5e0f32d0853abf868aa1efd6d">SERIALTALKS_DISCONNECT_OPCODE</a>&#160;&#160;&#160;(<a class="el" href="_serial_talks_8h.html#ad23fd1bd10f3b85a948343290b423a4e">SERIALTALKS_RESEVED_OPCODE_3</a>)</td></tr>
+<tr class="separator:a1e9991a5e0f32d0853abf868aa1efd6d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8437d2d8835ab9c32d52c716d878eddd"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_serial_talks_8h.html#a8437d2d8835ab9c32d52c716d878eddd">SERIALTALKS_GETEEPROM_OPCODE</a>&#160;&#160;&#160;(<a class="el" href="_serial_talks_8h.html#a2c45bb4bfe45c262a123bcb38340f739">SERIALTALKS_RESEVED_OPCODE_4</a>)</td></tr>
+<tr class="separator:a8437d2d8835ab9c32d52c716d878eddd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1267a9a1ecae7448925e015d410257bf"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_serial_talks_8h.html#a1267a9a1ecae7448925e015d410257bf">SERIALTALKS_SETEEPROM_OPCODE</a>&#160;&#160;&#160;(<a class="el" href="_serial_talks_8h.html#aaf69acb4f96ec9b21ab7148ff846ae8c">SERIALTALKS_RESEVED_OPCODE_5</a>)</td></tr>
+<tr class="separator:a1267a9a1ecae7448925e015d410257bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3f9c4cb7c9145391f23dc26a65319163"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_serial_talks_8h.html#a3f9c4cb7c9145391f23dc26a65319163">SERIALTALKS_GETBUFFERSIZE_OPCODE</a>&#160;&#160;&#160;(<a class="el" href="_serial_talks_8h.html#ac65ca73e7b8e87d43dc0702308e32ddd">SERIALTALKS_RESEVED_OPCODE_6</a>)</td></tr>
+<tr class="separator:a3f9c4cb7c9145391f23dc26a65319163"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa3f391bfe0f3f12e5a2289af5d75d27b"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_serial_talks_8h.html#aa3f391bfe0f3f12e5a2289af5d75d27b">SERIALTALKS_RESEND_OPCODE</a>&#160;&#160;&#160;0xFE</td></tr>
+<tr class="separator:aa3f391bfe0f3f12e5a2289af5d75d27b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aea8e127cfdd27614a0baed7f58138b90"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_serial_talks_8h.html#aea8e127cfdd27614a0baed7f58138b90">SERIALTALKS_FREE_BUFFER_OPCODE</a>&#160;&#160;&#160;0xFA</td></tr>
+<tr class="separator:aea8e127cfdd27614a0baed7f58138b90"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a37d105a48ca2d55c8e733fecc7dcdd60"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_serial_talks_8h.html#a37d105a48ca2d55c8e733fecc7dcdd60">SERIALTALKS_STDOUT_RETCODE</a>&#160;&#160;&#160;0xFFFFFFFF</td></tr>
+<tr class="separator:a37d105a48ca2d55c8e733fecc7dcdd60"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abdb2ac47a9307337b00854b423d3ffc9"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_serial_talks_8h.html#abdb2ac47a9307337b00854b423d3ffc9">SERIALTALKS_STDERR_RETCODE</a>&#160;&#160;&#160;0xFFFFFFFE</td></tr>
+<tr class="separator:abdb2ac47a9307337b00854b423d3ffc9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a733744455151856c86bca140b44d52b2"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_serial_talks_8h.html#a733744455151856c86bca140b44d52b2">SERIALTALKS_CRC_SIZE</a>&#160;&#160;&#160;2</td></tr>
+<tr class="separator:a733744455151856c86bca140b44d52b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
+Variables</h2></td></tr>
+<tr class="memitem:ad2a5b3993cbc91fe3d61a87df5dc005a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_serial_talks.html">SerialTalks</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_serial_talks_8h.html#ad2a5b3993cbc91fe3d61a87df5dc005a">talks</a></td></tr>
+<tr class="separator:ad2a5b3993cbc91fe3d61a87df5dc005a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Documentation des macros</h2>
+<a id="a54ac2ddd5c85a3b5bb2469ad60a2d903"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a54ac2ddd5c85a3b5bb2469ad60a2d903">&#9670;&nbsp;</a></span>SERIALTALKS_BAUDRATE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SERIALTALKS_BAUDRATE&#160;&#160;&#160;115200</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Bauderate utiliser </p>
+
+</div>
+</div>
+<a id="a733744455151856c86bca140b44d52b2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a733744455151856c86bca140b44d52b2">&#9670;&nbsp;</a></span>SERIALTALKS_CRC_SIZE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SERIALTALKS_CRC_SIZE&#160;&#160;&#160;2</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aac69fae21d2a4ea7e5db5a2fa6dad23d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aac69fae21d2a4ea7e5db5a2fa6dad23d">&#9670;&nbsp;</a></span>SERIALTALKS_DEFAULT_UUID_LENGTH</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SERIALTALKS_DEFAULT_UUID_LENGTH&#160;&#160;&#160;9</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1e9991a5e0f32d0853abf868aa1efd6d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1e9991a5e0f32d0853abf868aa1efd6d">&#9670;&nbsp;</a></span>SERIALTALKS_DISCONNECT_OPCODE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SERIALTALKS_DISCONNECT_OPCODE&#160;&#160;&#160;(<a class="el" href="_serial_talks_8h.html#ad23fd1bd10f3b85a948343290b423a4e">SERIALTALKS_RESEVED_OPCODE_3</a>)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aea8e127cfdd27614a0baed7f58138b90"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aea8e127cfdd27614a0baed7f58138b90">&#9670;&nbsp;</a></span>SERIALTALKS_FREE_BUFFER_OPCODE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SERIALTALKS_FREE_BUFFER_OPCODE&#160;&#160;&#160;0xFA</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3f9c4cb7c9145391f23dc26a65319163"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3f9c4cb7c9145391f23dc26a65319163">&#9670;&nbsp;</a></span>SERIALTALKS_GETBUFFERSIZE_OPCODE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SERIALTALKS_GETBUFFERSIZE_OPCODE&#160;&#160;&#160;(<a class="el" href="_serial_talks_8h.html#ac65ca73e7b8e87d43dc0702308e32ddd">SERIALTALKS_RESEVED_OPCODE_6</a>)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8437d2d8835ab9c32d52c716d878eddd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8437d2d8835ab9c32d52c716d878eddd">&#9670;&nbsp;</a></span>SERIALTALKS_GETEEPROM_OPCODE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SERIALTALKS_GETEEPROM_OPCODE&#160;&#160;&#160;(<a class="el" href="_serial_talks_8h.html#a2c45bb4bfe45c262a123bcb38340f739">SERIALTALKS_RESEVED_OPCODE_4</a>)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae6699bf7156ea8d801425762ecb2bd74"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae6699bf7156ea8d801425762ecb2bd74">&#9670;&nbsp;</a></span>SERIALTALKS_GETUUID_OPCODE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SERIALTALKS_GETUUID_OPCODE&#160;&#160;&#160;(<a class="el" href="_serial_talks_8h.html#ad6303eb67358625988f73f906b199fd9">SERIALTALKS_RESEVED_OPCODE_1</a>)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a11d366b3979b2105dcd2a2c7c9329494"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a11d366b3979b2105dcd2a2c7c9329494">&#9670;&nbsp;</a></span>SERIALTALKS_INPUT_BUFFER_SIZE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SERIALTALKS_INPUT_BUFFER_SIZE&#160;&#160;&#160;64</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1a21998925b3b6ce25bfb0b57f8a84cd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1a21998925b3b6ce25bfb0b57f8a84cd">&#9670;&nbsp;</a></span>SERIALTALKS_MASTER_BYTE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SERIALTALKS_MASTER_BYTE&#160;&#160;&#160;'R'</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6c244e1c01fe09474f4c7665847e9deb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6c244e1c01fe09474f4c7665847e9deb">&#9670;&nbsp;</a></span>SERIALTALKS_MAX_OPCODE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SERIALTALKS_MAX_OPCODE&#160;&#160;&#160;0x20</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="adf6c57366acf2dbe6a1f464a7ec77041"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adf6c57366acf2dbe6a1f464a7ec77041">&#9670;&nbsp;</a></span>SERIALTALKS_MAX_PROCESSING</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SERIALTALKS_MAX_PROCESSING&#160;&#160;&#160;0x4</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa9b06aaa07f7352b6039e4c16d24c4b2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa9b06aaa07f7352b6039e4c16d24c4b2">&#9670;&nbsp;</a></span>SERIALTALKS_OUTPUT_BUFFER_SIZE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SERIALTALKS_OUTPUT_BUFFER_SIZE&#160;&#160;&#160;64</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab336378d0cc6754ffaed1451ec5e6f68"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab336378d0cc6754ffaed1451ec5e6f68">&#9670;&nbsp;</a></span>SERIALTALKS_PING_OPCODE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SERIALTALKS_PING_OPCODE&#160;&#160;&#160;(<a class="el" href="_serial_talks_8h.html#a8b72a9684c436281663c58d5f77cf039">SERIALTALKS_RESEVED_OPCODE_0</a>)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa3f391bfe0f3f12e5a2289af5d75d27b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa3f391bfe0f3f12e5a2289af5d75d27b">&#9670;&nbsp;</a></span>SERIALTALKS_RESEND_OPCODE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SERIALTALKS_RESEND_OPCODE&#160;&#160;&#160;0xFE</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8b72a9684c436281663c58d5f77cf039"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8b72a9684c436281663c58d5f77cf039">&#9670;&nbsp;</a></span>SERIALTALKS_RESEVED_OPCODE_0</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SERIALTALKS_RESEVED_OPCODE_0&#160;&#160;&#160;0X0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad6303eb67358625988f73f906b199fd9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad6303eb67358625988f73f906b199fd9">&#9670;&nbsp;</a></span>SERIALTALKS_RESEVED_OPCODE_1</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SERIALTALKS_RESEVED_OPCODE_1&#160;&#160;&#160;0X1</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7af6cf5ebfabac0e12b42ca0d57c89b0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7af6cf5ebfabac0e12b42ca0d57c89b0">&#9670;&nbsp;</a></span>SERIALTALKS_RESEVED_OPCODE_2</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SERIALTALKS_RESEVED_OPCODE_2&#160;&#160;&#160;0X2</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad23fd1bd10f3b85a948343290b423a4e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad23fd1bd10f3b85a948343290b423a4e">&#9670;&nbsp;</a></span>SERIALTALKS_RESEVED_OPCODE_3</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SERIALTALKS_RESEVED_OPCODE_3&#160;&#160;&#160;0X3</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2c45bb4bfe45c262a123bcb38340f739"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2c45bb4bfe45c262a123bcb38340f739">&#9670;&nbsp;</a></span>SERIALTALKS_RESEVED_OPCODE_4</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SERIALTALKS_RESEVED_OPCODE_4&#160;&#160;&#160;0X4</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aaf69acb4f96ec9b21ab7148ff846ae8c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaf69acb4f96ec9b21ab7148ff846ae8c">&#9670;&nbsp;</a></span>SERIALTALKS_RESEVED_OPCODE_5</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SERIALTALKS_RESEVED_OPCODE_5&#160;&#160;&#160;0X5</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac65ca73e7b8e87d43dc0702308e32ddd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac65ca73e7b8e87d43dc0702308e32ddd">&#9670;&nbsp;</a></span>SERIALTALKS_RESEVED_OPCODE_6</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SERIALTALKS_RESEVED_OPCODE_6&#160;&#160;&#160;0X6</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2f6488c1511134818675017ca81723bf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2f6488c1511134818675017ca81723bf">&#9670;&nbsp;</a></span>SERIALTALKS_RESEVED_OPCODE_7</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SERIALTALKS_RESEVED_OPCODE_7&#160;&#160;&#160;0X7</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6d2b3e76e20847098fb2f2e42b965f13"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6d2b3e76e20847098fb2f2e42b965f13">&#9670;&nbsp;</a></span>SERIALTALKS_RESEVED_OPCODE_8</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SERIALTALKS_RESEVED_OPCODE_8&#160;&#160;&#160;0X8</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aeb923c4d0d545501a4b45d0b719cb5d9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeb923c4d0d545501a4b45d0b719cb5d9">&#9670;&nbsp;</a></span>SERIALTALKS_RESEVED_OPCODE_9</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SERIALTALKS_RESEVED_OPCODE_9&#160;&#160;&#160;0X9</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1267a9a1ecae7448925e015d410257bf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1267a9a1ecae7448925e015d410257bf">&#9670;&nbsp;</a></span>SERIALTALKS_SETEEPROM_OPCODE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SERIALTALKS_SETEEPROM_OPCODE&#160;&#160;&#160;(<a class="el" href="_serial_talks_8h.html#aaf69acb4f96ec9b21ab7148ff846ae8c">SERIALTALKS_RESEVED_OPCODE_5</a>)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab705110647a7f21d0f73ea410b0d612f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab705110647a7f21d0f73ea410b0d612f">&#9670;&nbsp;</a></span>SERIALTALKS_SETUUID_OPCODE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SERIALTALKS_SETUUID_OPCODE&#160;&#160;&#160;(<a class="el" href="_serial_talks_8h.html#a7af6cf5ebfabac0e12b42ca0d57c89b0">SERIALTALKS_RESEVED_OPCODE_2</a>)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a863c7c8d86704679090a021c308fe9e4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a863c7c8d86704679090a021c308fe9e4">&#9670;&nbsp;</a></span>SERIALTALKS_SLAVE_BYTE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SERIALTALKS_SLAVE_BYTE&#160;&#160;&#160;'A'</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="abdb2ac47a9307337b00854b423d3ffc9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abdb2ac47a9307337b00854b423d3ffc9">&#9670;&nbsp;</a></span>SERIALTALKS_STDERR_RETCODE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SERIALTALKS_STDERR_RETCODE&#160;&#160;&#160;0xFFFFFFFE</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a37d105a48ca2d55c8e733fecc7dcdd60"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a37d105a48ca2d55c8e733fecc7dcdd60">&#9670;&nbsp;</a></span>SERIALTALKS_STDOUT_RETCODE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SERIALTALKS_STDOUT_RETCODE&#160;&#160;&#160;0xFFFFFFFF</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad8d4edff1ced67e2bec1902168ce8884"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad8d4edff1ced67e2bec1902168ce8884">&#9670;&nbsp;</a></span>SERIALTALKS_UUID_ADDRESS</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SERIALTALKS_UUID_ADDRESS&#160;&#160;&#160;0x0000000000</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af4423a1f3526cac7c514d159b76e87d0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af4423a1f3526cac7c514d159b76e87d0">&#9670;&nbsp;</a></span>SERIALTALKS_UUID_LENGTH</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SERIALTALKS_UUID_LENGTH&#160;&#160;&#160;32</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Documentation des variables</h2>
+<a id="ad2a5b3993cbc91fe3d61a87df5dc005a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad2a5b3993cbc91fe3d61a87df5dc005a">&#9670;&nbsp;</a></span>talks</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_serial_talks.html">SerialTalks</a> talks</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Généré par &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.18
+</small></address>
+</body>
+</html>

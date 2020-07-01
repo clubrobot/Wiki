@@ -1,0 +1,136 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.18"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Documentation Cpp Arduino:  Fichier source de common/PID.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="logo_arduino.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Documentation Cpp Arduino
+   &#160;<span id="projectnumber">1.1</span>
+   </div>
+   <div id="projectbrief">Bienvenue dans la documentation Cpp (arduino) du club robot</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.8.18 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Recherche');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_4574b85c0abcef1e41f0bb02fb9bfbe2.html">common</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">PID.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_p_i_d_8h.html">Aller à la documentation de ce fichier.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef __PID_H__</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define __PID_H__</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;math.h&gt;</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160; </div>
+<div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="class_p_i_d.html">   12</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_p_i_d.html">PID</a></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;{</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="class_p_i_d.html#a0311b6f7de348499ce24e53ba353514a">   19</a></span>&#160;    <a class="code" href="class_p_i_d.html#a0311b6f7de348499ce24e53ba353514a">PID</a>() : <a class="code" href="class_p_i_d.html#a6dfcef318a5bec51604722c995107afb">m_Kp</a>(1), <a class="code" href="class_p_i_d.html#a7102dc4e1eb32ddda373c48f7d31d773">m_Ki</a>(0), <a class="code" href="class_p_i_d.html#a323e85c3819b8b4798c48c0981453a7c">m_Kd</a>(0), <a class="code" href="class_p_i_d.html#ae67b5480cf0b33644868bf19aea0c644">m_minOutput</a>(-INFINITY), <a class="code" href="class_p_i_d.html#ac6b93cbdcb5556d420890810e34b32a0">m_maxOutput</a>(INFINITY){}</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <span class="keywordtype">float</span> <a class="code" href="class_p_i_d.html#a9982ecaf693e2b3b3873f749983814dd">compute</a>(<span class="keywordtype">float</span> setpoint, <span class="keywordtype">float</span> input, <span class="keywordtype">float</span> timestep);</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_p_i_d.html#af9677e76cb1beffbcf3f54cbc627c530">reset</a>();</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_p_i_d.html#a11d8c4753029f8cc187d2751cb00c4e9">setTunings</a>(<span class="keywordtype">float</span> Kp, <span class="keywordtype">float</span> Ki, <span class="keywordtype">float</span> Kd);</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_p_i_d.html#aa83c2d7eb95c55f375f85a319f8037b3">setOutputLimits</a>(<span class="keywordtype">float</span> minOutput, <span class="keywordtype">float</span> maxOutput);</div>
+<div class="line"><a name="l00057"></a><span class="lineno"><a class="line" href="class_p_i_d.html#a83ed5fcf6da6d340d1d527114445a949">   57</a></span>&#160;    <span class="keywordtype">float</span> <a class="code" href="class_p_i_d.html#a83ed5fcf6da6d340d1d527114445a949">getKp</a>()<span class="keyword"> const </span>{<span class="keywordflow">return</span> <a class="code" href="class_p_i_d.html#a6dfcef318a5bec51604722c995107afb">m_Kp</a>;}</div>
+<div class="line"><a name="l00062"></a><span class="lineno"><a class="line" href="class_p_i_d.html#a30b4a12f5ad34b7c540365051f79e57c">   62</a></span>&#160;    <span class="keywordtype">float</span> <a class="code" href="class_p_i_d.html#a30b4a12f5ad34b7c540365051f79e57c">getKi</a>()<span class="keyword"> const </span>{<span class="keywordflow">return</span> <a class="code" href="class_p_i_d.html#a7102dc4e1eb32ddda373c48f7d31d773">m_Ki</a>;}</div>
+<div class="line"><a name="l00067"></a><span class="lineno"><a class="line" href="class_p_i_d.html#ac71200e7079fdd7cf3dee5f7e93c7582">   67</a></span>&#160;    <span class="keywordtype">float</span> <a class="code" href="class_p_i_d.html#ac71200e7079fdd7cf3dee5f7e93c7582">getKd</a>()<span class="keyword"> const </span>{<span class="keywordflow">return</span> <a class="code" href="class_p_i_d.html#a323e85c3819b8b4798c48c0981453a7c">m_Kd</a>;}</div>
+<div class="line"><a name="l00072"></a><span class="lineno"><a class="line" href="class_p_i_d.html#a19e0b4481b71f304ee21ed1edb1ba331">   72</a></span>&#160;    <span class="keywordtype">float</span> <a class="code" href="class_p_i_d.html#a19e0b4481b71f304ee21ed1edb1ba331">getMinOutput</a>()<span class="keyword"> const </span>{<span class="keywordflow">return</span> <a class="code" href="class_p_i_d.html#ae67b5480cf0b33644868bf19aea0c644">m_minOutput</a>;}</div>
+<div class="line"><a name="l00077"></a><span class="lineno"><a class="line" href="class_p_i_d.html#a310f5f2da22b3b492cfe60ebad1f7939">   77</a></span>&#160;    <span class="keywordtype">float</span> <a class="code" href="class_p_i_d.html#a310f5f2da22b3b492cfe60ebad1f7939">getMaxOutput</a>()<span class="keyword"> const </span>{<span class="keywordflow">return</span> <a class="code" href="class_p_i_d.html#ac6b93cbdcb5556d420890810e34b32a0">m_maxOutput</a>;}</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_p_i_d.html#a662fa93d4f16cd06142aecd54c2b0487">load</a>(<span class="keywordtype">int</span> address);</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;     <span class="keywordtype">void</span> <a class="code" href="class_p_i_d.html#a234aacad334e00873ec1e467a6dd8437">save</a>(<span class="keywordtype">int</span> address) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160; </div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160; </div>
+<div class="line"><a name="l00091"></a><span class="lineno"><a class="line" href="class_p_i_d.html#a8b762733817cc6c07439c2e155a2201b">   91</a></span>&#160;    <span class="keywordtype">float</span> <a class="code" href="class_p_i_d.html#a8b762733817cc6c07439c2e155a2201b">m_errorIntegral</a>; </div>
+<div class="line"><a name="l00092"></a><span class="lineno"><a class="line" href="class_p_i_d.html#afec4e227d7dacf55d0efc3864ffd093c">   92</a></span>&#160;    <span class="keywordtype">float</span> <a class="code" href="class_p_i_d.html#afec4e227d7dacf55d0efc3864ffd093c">m_previousError</a>; </div>
+<div class="line"><a name="l00094"></a><span class="lineno"><a class="line" href="class_p_i_d.html#a6dfcef318a5bec51604722c995107afb">   94</a></span>&#160;    <span class="keywordtype">float</span> <a class="code" href="class_p_i_d.html#a6dfcef318a5bec51604722c995107afb">m_Kp</a>;</div>
+<div class="line"><a name="l00095"></a><span class="lineno"><a class="line" href="class_p_i_d.html#a7102dc4e1eb32ddda373c48f7d31d773">   95</a></span>&#160;    <span class="keywordtype">float</span> <a class="code" href="class_p_i_d.html#a7102dc4e1eb32ddda373c48f7d31d773">m_Ki</a>;</div>
+<div class="line"><a name="l00096"></a><span class="lineno"><a class="line" href="class_p_i_d.html#a323e85c3819b8b4798c48c0981453a7c">   96</a></span>&#160;    <span class="keywordtype">float</span> <a class="code" href="class_p_i_d.html#a323e85c3819b8b4798c48c0981453a7c">m_Kd</a>;</div>
+<div class="line"><a name="l00097"></a><span class="lineno"><a class="line" href="class_p_i_d.html#ae67b5480cf0b33644868bf19aea0c644">   97</a></span>&#160;    <span class="keywordtype">float</span> <a class="code" href="class_p_i_d.html#ae67b5480cf0b33644868bf19aea0c644">m_minOutput</a>; </div>
+<div class="line"><a name="l00098"></a><span class="lineno"><a class="line" href="class_p_i_d.html#ac6b93cbdcb5556d420890810e34b32a0">   98</a></span>&#160;    <span class="keywordtype">float</span> <a class="code" href="class_p_i_d.html#ac6b93cbdcb5556d420890810e34b32a0">m_maxOutput</a>;</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;};</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160; </div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;<span class="preprocessor">#endif // __PID_H__</span></div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="aclass_p_i_d_html_a9982ecaf693e2b3b3873f749983814dd"><div class="ttname"><a href="class_p_i_d.html#a9982ecaf693e2b3b3873f749983814dd">PID::compute</a></div><div class="ttdeci">float compute(float setpoint, float input, float timestep)</div><div class="ttdoc">Calcul l'asservissement.</div><div class="ttdef"><b>Definition:</b> PID.cpp:9</div></div>
+<div class="ttc" id="aclass_p_i_d_html"><div class="ttname"><a href="class_p_i_d.html">PID</a></div><div class="ttdoc">Classe d'asservissement.</div><div class="ttdef"><b>Definition:</b> PID.h:13</div></div>
+<div class="ttc" id="aclass_p_i_d_html_a662fa93d4f16cd06142aecd54c2b0487"><div class="ttname"><a href="class_p_i_d.html#a662fa93d4f16cd06142aecd54c2b0487">PID::load</a></div><div class="ttdeci">void load(int address)</div><div class="ttdoc">Charge les paramètres de la mémoire.</div><div class="ttdef"><b>Definition:</b> PID.cpp:33</div></div>
+<div class="ttc" id="aclass_p_i_d_html_a323e85c3819b8b4798c48c0981453a7c"><div class="ttname"><a href="class_p_i_d.html#a323e85c3819b8b4798c48c0981453a7c">PID::m_Kd</a></div><div class="ttdeci">float m_Kd</div><div class="ttdef"><b>Definition:</b> PID.h:96</div></div>
+<div class="ttc" id="aclass_p_i_d_html_ae67b5480cf0b33644868bf19aea0c644"><div class="ttname"><a href="class_p_i_d.html#ae67b5480cf0b33644868bf19aea0c644">PID::m_minOutput</a></div><div class="ttdeci">float m_minOutput</div><div class="ttdef"><b>Definition:</b> PID.h:97</div></div>
+<div class="ttc" id="aclass_p_i_d_html_ac6b93cbdcb5556d420890810e34b32a0"><div class="ttname"><a href="class_p_i_d.html#ac6b93cbdcb5556d420890810e34b32a0">PID::m_maxOutput</a></div><div class="ttdeci">float m_maxOutput</div><div class="ttdef"><b>Definition:</b> PID.h:98</div></div>
+<div class="ttc" id="aclass_p_i_d_html_a7102dc4e1eb32ddda373c48f7d31d773"><div class="ttname"><a href="class_p_i_d.html#a7102dc4e1eb32ddda373c48f7d31d773">PID::m_Ki</a></div><div class="ttdeci">float m_Ki</div><div class="ttdef"><b>Definition:</b> PID.h:95</div></div>
+<div class="ttc" id="aclass_p_i_d_html_af9677e76cb1beffbcf3f54cbc627c530"><div class="ttname"><a href="class_p_i_d.html#af9677e76cb1beffbcf3f54cbc627c530">PID::reset</a></div><div class="ttdeci">void reset()</div><div class="ttdoc">Réinitialise les accumulateurs.</div><div class="ttdef"><b>Definition:</b> PID.cpp:27</div></div>
+<div class="ttc" id="aclass_p_i_d_html_a83ed5fcf6da6d340d1d527114445a949"><div class="ttname"><a href="class_p_i_d.html#a83ed5fcf6da6d340d1d527114445a949">PID::getKp</a></div><div class="ttdeci">float getKp() const</div><div class="ttdoc">Retourne le coefficient proportionnel.</div><div class="ttdef"><b>Definition:</b> PID.h:57</div></div>
+<div class="ttc" id="aclass_p_i_d_html_afec4e227d7dacf55d0efc3864ffd093c"><div class="ttname"><a href="class_p_i_d.html#afec4e227d7dacf55d0efc3864ffd093c">PID::m_previousError</a></div><div class="ttdeci">float m_previousError</div><div class="ttdef"><b>Definition:</b> PID.h:92</div></div>
+<div class="ttc" id="aclass_p_i_d_html_a30b4a12f5ad34b7c540365051f79e57c"><div class="ttname"><a href="class_p_i_d.html#a30b4a12f5ad34b7c540365051f79e57c">PID::getKi</a></div><div class="ttdeci">float getKi() const</div><div class="ttdoc">Retourne le coefficient intégrateur.</div><div class="ttdef"><b>Definition:</b> PID.h:62</div></div>
+<div class="ttc" id="aclass_p_i_d_html_a6dfcef318a5bec51604722c995107afb"><div class="ttname"><a href="class_p_i_d.html#a6dfcef318a5bec51604722c995107afb">PID::m_Kp</a></div><div class="ttdeci">float m_Kp</div><div class="ttdef"><b>Definition:</b> PID.h:94</div></div>
+<div class="ttc" id="aclass_p_i_d_html_aa83c2d7eb95c55f375f85a319f8037b3"><div class="ttname"><a href="class_p_i_d.html#aa83c2d7eb95c55f375f85a319f8037b3">PID::setOutputLimits</a></div><div class="ttdeci">void setOutputLimits(float minOutput, float maxOutput)</div><div class="ttdoc">Charge les limites de sorties.</div><div class="ttdef"><b>Definition:</b> PID.cpp:57</div></div>
+<div class="ttc" id="aclass_p_i_d_html_ac71200e7079fdd7cf3dee5f7e93c7582"><div class="ttname"><a href="class_p_i_d.html#ac71200e7079fdd7cf3dee5f7e93c7582">PID::getKd</a></div><div class="ttdeci">float getKd() const</div><div class="ttdoc">Retourne le coefficient dérivateur.</div><div class="ttdef"><b>Definition:</b> PID.h:67</div></div>
+<div class="ttc" id="aclass_p_i_d_html_a8b762733817cc6c07439c2e155a2201b"><div class="ttname"><a href="class_p_i_d.html#a8b762733817cc6c07439c2e155a2201b">PID::m_errorIntegral</a></div><div class="ttdeci">float m_errorIntegral</div><div class="ttdef"><b>Definition:</b> PID.h:91</div></div>
+<div class="ttc" id="aclass_p_i_d_html_a0311b6f7de348499ce24e53ba353514a"><div class="ttname"><a href="class_p_i_d.html#a0311b6f7de348499ce24e53ba353514a">PID::PID</a></div><div class="ttdeci">PID()</div><div class="ttdoc">Constructeur de PID Constructeur de PID qui initialise toutes les valeurs à des valeurs neutres (Kp=1...</div><div class="ttdef"><b>Definition:</b> PID.h:19</div></div>
+<div class="ttc" id="aclass_p_i_d_html_a19e0b4481b71f304ee21ed1edb1ba331"><div class="ttname"><a href="class_p_i_d.html#a19e0b4481b71f304ee21ed1edb1ba331">PID::getMinOutput</a></div><div class="ttdeci">float getMinOutput() const</div><div class="ttdoc">Retourne la sortie minimal.</div><div class="ttdef"><b>Definition:</b> PID.h:72</div></div>
+<div class="ttc" id="aclass_p_i_d_html_a234aacad334e00873ec1e467a6dd8437"><div class="ttname"><a href="class_p_i_d.html#a234aacad334e00873ec1e467a6dd8437">PID::save</a></div><div class="ttdeci">void save(int address) const</div><div class="ttdoc">Sauvegarde les paramètres dans la mémoire.</div><div class="ttdef"><b>Definition:</b> PID.cpp:42</div></div>
+<div class="ttc" id="aclass_p_i_d_html_a310f5f2da22b3b492cfe60ebad1f7939"><div class="ttname"><a href="class_p_i_d.html#a310f5f2da22b3b492cfe60ebad1f7939">PID::getMaxOutput</a></div><div class="ttdeci">float getMaxOutput() const</div><div class="ttdoc">Retourne la sortie maximal.</div><div class="ttdef"><b>Definition:</b> PID.h:77</div></div>
+<div class="ttc" id="aclass_p_i_d_html_a11d8c4753029f8cc187d2751cb00c4e9"><div class="ttname"><a href="class_p_i_d.html#a11d8c4753029f8cc187d2751cb00c4e9">PID::setTunings</a></div><div class="ttdeci">void setTunings(float Kp, float Ki, float Kd)</div><div class="ttdoc">Charge de nouvelles constantes d'asservissements.</div><div class="ttdef"><b>Definition:</b> PID.cpp:51</div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Généré par &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.18
+</small></address>
+</body>
+</html>

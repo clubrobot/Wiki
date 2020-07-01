@@ -65,4 +65,4 @@ Il faut savoir que dans l’algorithme ces points sont stockés sous la forme d�
 
 ## API
 
-[Purepursuit](includes/API/class_pure_pursuit.html)
+[Purepursuit](includes/API/html/class_pure_pursuit.html)

@@ -1,0 +1,396 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.18"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Documentation Cpp Arduino: Référence de la classe UltrasonicSensor</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="logo_arduino.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Documentation Cpp Arduino
+   &#160;<span id="projectnumber">1.1</span>
+   </div>
+   <div id="projectbrief">Bienvenue dans la documentation Cpp (arduino) du club robot</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.8.18 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Recherche');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Fonctions membres publiques</a> &#124;
+<a href="#pri-methods">Fonctions membres privées</a> &#124;
+<a href="#pri-attribs">Attributs privés</a> &#124;
+<a href="class_ultrasonic_sensor-members.html">Liste de tous les membres</a>  </div>
+  <div class="headertitle">
+<div class="title">Référence de la classe UltrasonicSensor</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>Permet d'utiliser des capteurs de distance ulrasons.  
+ <a href="class_ultrasonic_sensor.html#details">Plus de détails...</a></p>
+
+<p><code>#include &lt;<a class="el" href="_ultrasonic_sensor_8h_source.html">UltrasonicSensor.h</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Fonctions membres publiques</h2></td></tr>
+<tr class="memitem:aa1d82c8ca99ba8f202a63104987a3377"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ultrasonic_sensor.html#aa1d82c8ca99ba8f202a63104987a3377">attach</a> (int <a class="el" href="class_ultrasonic_sensor.html#a6867f5408f37cdc91c64f21abc20bfaa">trig</a>, int echo)</td></tr>
+<tr class="memdesc:aa1d82c8ca99ba8f202a63104987a3377"><td class="mdescLeft">&#160;</td><td class="mdescRight">Definit les pins de TRIG et ECHO, (et attribue alors un <a class="el" href="class_trig_handler.html" title="Gère le pin d&#39;émission du capteur.">TrigHandler</a> et un <a class="el" href="class_echo_handler.html" title="Gère le pin de reception du capteur.">EchoHandler</a>)  <a href="class_ultrasonic_sensor.html#aa1d82c8ca99ba8f202a63104987a3377">Plus de détails...</a><br /></td></tr>
+<tr class="separator:aa1d82c8ca99ba8f202a63104987a3377"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acd2ef36cfe1e44b04d9c83c40abbed63"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ultrasonic_sensor.html#acd2ef36cfe1e44b04d9c83c40abbed63">update</a> ()</td></tr>
+<tr class="memdesc:acd2ef36cfe1e44b04d9c83c40abbed63"><td class="mdescLeft">&#160;</td><td class="mdescRight">Permet le calcul de distance ou de TIMEOUT fonction à mettre dans la loop() arduino.  <a href="class_ultrasonic_sensor.html#acd2ef36cfe1e44b04d9c83c40abbed63">Plus de détails...</a><br /></td></tr>
+<tr class="separator:acd2ef36cfe1e44b04d9c83c40abbed63"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a67eef75eae8a324b23024ca55faa9ea9"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ultrasonic_sensor.html#a67eef75eae8a324b23024ca55faa9ea9">getMesure</a> ()</td></tr>
+<tr class="memdesc:a67eef75eae8a324b23024ca55faa9ea9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Renvoie la dernière mesure effectuée par le capteur en mm.  <a href="class_ultrasonic_sensor.html#a67eef75eae8a324b23024ca55faa9ea9">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a67eef75eae8a324b23024ca55faa9ea9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6867f5408f37cdc91c64f21abc20bfaa"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ultrasonic_sensor.html#a6867f5408f37cdc91c64f21abc20bfaa">trig</a> ()</td></tr>
+<tr class="memdesc:a6867f5408f37cdc91c64f21abc20bfaa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Commande au capteur d'émettre une impulsion (ne réémet que si le capteur est prêt.  <a href="class_ultrasonic_sensor.html#a6867f5408f37cdc91c64f21abc20bfaa">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a6867f5408f37cdc91c64f21abc20bfaa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acb759e9b18dc541a5525511a6f69e556"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ultrasonic_sensor.html#acb759e9b18dc541a5525511a6f69e556">getReady</a> ()</td></tr>
+<tr class="memdesc:acb759e9b18dc541a5525511a6f69e556"><td class="mdescLeft">&#160;</td><td class="mdescRight">Permet de savoir si le capteur est prêt à réémettre une nouvelle impulsion ou s'il est en attente d'une mesure.  <a href="class_ultrasonic_sensor.html#acb759e9b18dc541a5525511a6f69e556">Plus de détails...</a><br /></td></tr>
+<tr class="separator:acb759e9b18dc541a5525511a6f69e556"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+Fonctions membres privées</h2></td></tr>
+<tr class="memitem:a291f948b7b2f468ee7aa7404595e43ae"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ultrasonic_sensor.html#a291f948b7b2f468ee7aa7404595e43ae">filtrage</a> ()</td></tr>
+<tr class="memdesc:a291f948b7b2f468ee7aa7404595e43ae"><td class="mdescLeft">&#160;</td><td class="mdescRight">Permet un d'apporter un filtrage aux valeurs obtenues. (Fonction à modifier si besoin, le filtrage actuel améliore les erreurs liées aux très petites distnace)  <a href="class_ultrasonic_sensor.html#a291f948b7b2f468ee7aa7404595e43ae">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a291f948b7b2f468ee7aa7404595e43ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Attributs privés</h2></td></tr>
+<tr class="memitem:a7bf3b885bb615c9ae0c98ebe94ac432d"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ultrasonic_sensor.html#a7bf3b885bb615c9ae0c98ebe94ac432d">m_mesure</a></td></tr>
+<tr class="separator:a7bf3b885bb615c9ae0c98ebe94ac432d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a96596401c495c4b429e501304b0c8fcb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_echo_handler.html">EchoHandler</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ultrasonic_sensor.html#a96596401c495c4b429e501304b0c8fcb">echohandler</a></td></tr>
+<tr class="separator:a96596401c495c4b429e501304b0c8fcb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af48d536683bc01b0c1cd4b8a533b6685"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_trig_handler.html">TrigHandler</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ultrasonic_sensor.html#af48d536683bc01b0c1cd4b8a533b6685">trighandler</a></td></tr>
+<tr class="separator:af48d536683bc01b0c1cd4b8a533b6685"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9917459345c5950dc9aa7991015b13e6"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ultrasonic_sensor.html#a9917459345c5950dc9aa7991015b13e6">m_dejaTest</a></td></tr>
+<tr class="separator:a9917459345c5950dc9aa7991015b13e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3a88cd6a87979d7cae9e0397bee546a3"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ultrasonic_sensor.html#a3a88cd6a87979d7cae9e0397bee546a3">m_inf2</a></td></tr>
+<tr class="separator:a3a88cd6a87979d7cae9e0397bee546a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Description détaillée</h2>
+<div class="textblock"><p>Permet d'utiliser des capteurs de distance ulrasons. </p>
+<p>class <a class="el" href="class_ultrasonic_sensor.html" title="Permet d&#39;utiliser des capteurs de distance ulrasons.">UltrasonicSensor</a> est un outil gérant l'émission/reception d'un signal ultrason(non codé) depuis un capteur ultrason (ceux utilisés étaient des HC-SR04). Il calcule également la distance qui sépare le capteur de l'objet en mm.</p>
+<p>Fonctionnement : le capteur emet une impulsion ultrasonore puis passe en mode reception. L'impulsion "rebondit" sur l'obstacle et revient vers le capteur. On reçoit alors un signal haut sur la pin echo de du capteur. Il suffit de mesurer le temps l'aller-retour pour connaitre la distance parcourue (2x distance de l'objet).</p>
+<p>ATTENTION : - Seuls les pins 2-3 de l'arduino nano peuvent être utilisés pour la réception(ECHO) du signal car ils doivent supporter les interruptions <br  />
+</p><ul>
+<li>Il est déconseillé d'utiliser deux capteurs ultrasons sur le même pin de reception de l'arduino</li>
+</ul>
+<p>Il est tout à fait possible d'utiliser le pin de Trig pour plusieurs capteurs qui émettront alors en même temps.</p>
+<p>Les pins 1 à 9 peuvent être utilisés pour le pin de TRIG</p>
+<p>Remarque : La classe n'utilise pas <a class="el" href="_clock_8h.html">Clock.h</a> mais aurait très bien pu très bien :) </p>
+</div><h2 class="groupheader">Documentation des fonctions membres</h2>
+<a id="aa1d82c8ca99ba8f202a63104987a3377"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa1d82c8ca99ba8f202a63104987a3377">&#9670;&nbsp;</a></span>attach()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UltrasonicSensor::attach </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>trig</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>echo</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definit les pins de TRIG et ECHO, (et attribue alors un <a class="el" href="class_trig_handler.html" title="Gère le pin d&#39;émission du capteur.">TrigHandler</a> et un <a class="el" href="class_echo_handler.html" title="Gère le pin de reception du capteur.">EchoHandler</a>) </p>
+<pre class="fragment">\param trig pin de l'arduino correspondant à TRIG
+</pre> <dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">echo</td><td>pin de l'arduino correspondant à ECHO </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a291f948b7b2f468ee7aa7404595e43ae"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a291f948b7b2f468ee7aa7404595e43ae">&#9670;&nbsp;</a></span>filtrage()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UltrasonicSensor::filtrage </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Permet un d'apporter un filtrage aux valeurs obtenues. (Fonction à modifier si besoin, le filtrage actuel améliore les erreurs liées aux très petites distnace) </p>
+
+</div>
+</div>
+<a id="a67eef75eae8a324b23024ca55faa9ea9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a67eef75eae8a324b23024ca55faa9ea9">&#9670;&nbsp;</a></span>getMesure()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned int UltrasonicSensor::getMesure </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Renvoie la dernière mesure effectuée par le capteur en mm. </p>
+<dl class="section return"><dt>Renvoie</dt><dd>distance en mm </dd></dl>
+
+</div>
+</div>
+<a id="acb759e9b18dc541a5525511a6f69e556"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acb759e9b18dc541a5525511a6f69e556">&#9670;&nbsp;</a></span>getReady()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool UltrasonicSensor::getReady </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Permet de savoir si le capteur est prêt à réémettre une nouvelle impulsion ou s'il est en attente d'une mesure. </p>
+<dl class="section return"><dt>Renvoie</dt><dd>1 si pret 0 sinon </dd></dl>
+
+</div>
+</div>
+<a id="a6867f5408f37cdc91c64f21abc20bfaa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6867f5408f37cdc91c64f21abc20bfaa">&#9670;&nbsp;</a></span>trig()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UltrasonicSensor::trig </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Commande au capteur d'émettre une impulsion (ne réémet que si le capteur est prêt. </p>
+
+</div>
+</div>
+<a id="acd2ef36cfe1e44b04d9c83c40abbed63"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acd2ef36cfe1e44b04d9c83c40abbed63">&#9670;&nbsp;</a></span>update()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UltrasonicSensor::update </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Permet le calcul de distance ou de TIMEOUT fonction à mettre dans la loop() arduino. </p>
+
+</div>
+</div>
+<h2 class="groupheader">Documentation des données membres</h2>
+<a id="a96596401c495c4b429e501304b0c8fcb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a96596401c495c4b429e501304b0c8fcb">&#9670;&nbsp;</a></span>echohandler</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_echo_handler.html">EchoHandler</a>* UltrasonicSensor::echohandler</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9917459345c5950dc9aa7991015b13e6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9917459345c5950dc9aa7991015b13e6">&#9670;&nbsp;</a></span>m_dejaTest</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool UltrasonicSensor::m_dejaTest</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3a88cd6a87979d7cae9e0397bee546a3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3a88cd6a87979d7cae9e0397bee546a3">&#9670;&nbsp;</a></span>m_inf2</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool UltrasonicSensor::m_inf2</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7bf3b885bb615c9ae0c98ebe94ac432d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7bf3b885bb615c9ae0c98ebe94ac432d">&#9670;&nbsp;</a></span>m_mesure</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned int UltrasonicSensor::m_mesure</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af48d536683bc01b0c1cd4b8a533b6685"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af48d536683bc01b0c1cd4b8a533b6685">&#9670;&nbsp;</a></span>trighandler</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_trig_handler.html">TrigHandler</a>* UltrasonicSensor::trighandler</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>La documentation de cette classe a été générée à partir du fichier suivant :<ul>
+<li>common/<a class="el" href="_ultrasonic_sensor_8h_source.html">UltrasonicSensor.h</a></li>
+<li>common/<a class="el" href="_ultrasonic_sensor_8cpp.html">UltrasonicSensor.cpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Généré par &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.18
+</small></address>
+</body>
+</html>

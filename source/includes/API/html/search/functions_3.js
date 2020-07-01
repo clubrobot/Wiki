@@ -1,0 +1,22 @@
+var searchData=
+[
+  ['calculatecolortemperature_1245',['calculateColorTemperature',['../class_adafruit___t_c_s34725.html#a9c6c7ab8a84a47a65ff04a125bcfee92',1,'Adafruit_TCS34725']]],
+  ['calculatelux_1246',['calculateLux',['../class_adafruit___t_c_s34725.html#a10b9be546ee3bdf04e0380161aad589b',1,'Adafruit_TCS34725']]],
+  ['calibrationtransform_1247',['calibrationTransform',['../class_magnetic_compas.html#a55a6b3ed3e9971ff48341da4d023d9f9',1,'MagneticCompas']]],
+  ['checklookaheadgoal_1248',['checkLookAheadGoal',['../class_pure_pursuit.html#a317d5860811b40f40909bef6cc6d8f19',1,'PurePursuit']]],
+  ['checkprojectiongoal_1249',['checkProjectionGoal',['../class_pure_pursuit.html#a10ddd92e112e6fc7ab5e7d817ffd9fa9',1,'PurePursuit']]],
+  ['clear_1250',['clear',['../struct_deserializer.html#acc3dc7a9d03ad50f5a7f139ab44f5dd5',1,'Deserializer']]],
+  ['clearinterrupt_1251',['clearInterrupt',['../class_adafruit___t_c_s34725.html#a731a3542039027f75170b667aaf8e3a0',1,'Adafruit_TCS34725']]],
+  ['clock_1252',['Clock',['../class_clock.html#adbc370eb6b5f8d01645cf440188160a8',1,'Clock']]],
+  ['close_5fgripper_1253',['close_gripper',['../class_robot_arm.html#a35eb738c6d2a5d5215df3020b00f7ef7',1,'RobotArm']]],
+  ['codewheel_1254',['Codewheel',['../class_codewheel.html#a30278efc491db504e5c217ea59213e06',1,'Codewheel']]],
+  ['compute_1255',['compute',['../class_p_i_d.html#a9982ecaf693e2b3b3873f749983814dd',1,'PID']]],
+  ['computeorientation_1256',['computeOrientation',['../class_magnetic_compas.html#a737f9cc154c8b635ba243d1f61b3c198',1,'MagneticCompas']]],
+  ['computevelsetpoints_1257',['computeVelSetpoints',['../class_abstract_move_strategy.html#a8bed0fd2cf5af27a7804d1be57823a24',1,'AbstractMoveStrategy::computeVelSetpoints()'],['../class_pure_pursuit.html#a657a00d409067352855aa685b57c6f45',1,'PurePursuit::computeVelSetpoints()'],['../class_turn_on_the_spot.html#a29bd9e885029a98234ead66e3429f8f5',1,'TurnOnTheSpot::computeVelSetpoints()']]],
+  ['convert_5fdeg_1258',['convert_deg',['../class_robot_arm.html#aef158a9e7912ee28a5d4d01ab2ccba43',1,'RobotArm']]],
+  ['count_1259',['count',['../class_queue_array.html#a1250b92f82eb8edbbf098750ca11b870',1,'QueueArray']]],
+  ['crc16_1260',['CRC16',['../class_c_r_c16.html#a0074af6197fe02821317000c9579a6af',1,'CRC16']]],
+  ['crccheck_1261',['CRCcheck',['../class_c_r_c16.html#a32d81b429375e14543552ec937e40a80',1,'CRC16']]],
+  ['crcprocessbuffer_1262',['CRCprocessBuffer',['../class_c_r_c16.html#a3aa4e867086e16f482a80e956f074984',1,'CRC16']]],
+  ['crcprocessbyte_1263',['CRCprocessByte',['../class_c_r_c16.html#a5473652b6a07d29a867b3b8836768160',1,'CRC16']]]
+];

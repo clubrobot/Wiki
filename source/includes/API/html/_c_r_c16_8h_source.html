@@ -1,0 +1,111 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.18"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Documentation Cpp Arduino:  Fichier source de common/CRC16.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="logo_arduino.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Documentation Cpp Arduino
+   &#160;<span id="projectnumber">1.1</span>
+   </div>
+   <div id="projectbrief">Bienvenue dans la documentation Cpp (arduino) du club robot</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.8.18 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Recherche');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_4574b85c0abcef1e41f0bb02fb9bfbe2.html">common</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">CRC16.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_c_r_c16_8h.html">Aller à la documentation de ce fichier.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#include &lt;Arduino.h&gt;</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#include &lt;stdio.h&gt;</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &lt;string.h&gt;</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160; </div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#define CRC_POLYNOME 0X1021 //CRC16_CCITT</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno"><a class="line" href="_c_r_c16_8h.html#ad6c57b6197a26f139d6d8224677e6031">    6</a></span>&#160; </div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160; </div>
+<div class="line"><a name="l00008"></a><span class="lineno"><a class="line" href="class_c_r_c16.html">    8</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_c_r_c16.html">CRC16</a></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;{</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;        <a class="code" href="class_c_r_c16.html#a0074af6197fe02821317000c9579a6af">CRC16</a>();</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160; </div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;        uint16_t <a class="code" href="class_c_r_c16.html#a5473652b6a07d29a867b3b8836768160">CRCprocessByte</a>(uint8_t data);</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;        uint16_t <a class="code" href="class_c_r_c16.html#a3aa4e867086e16f482a80e956f074984">CRCprocessBuffer</a>(<span class="keyword">const</span> uint8_t *data_p, <span class="keywordtype">int</span> length);</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;        <span class="keywordtype">bool</span>     <a class="code" href="class_c_r_c16.html#a32d81b429375e14543552ec937e40a80">CRCcheck</a>(uint8_t *data_p, uint16_t length, uint16_t <a class="code" href="class_c_r_c16.html#aae22e2b7c6b2b96d76bd04ab28caf6d4">crc</a>);</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160; </div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160; </div>
+<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="class_c_r_c16.html#aae22e2b7c6b2b96d76bd04ab28caf6d4">   19</a></span>&#160;        uint16_t <a class="code" href="class_c_r_c16.html#aae22e2b7c6b2b96d76bd04ab28caf6d4">crc</a>;</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    </div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;};</div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="aclass_c_r_c16_html_a0074af6197fe02821317000c9579a6af"><div class="ttname"><a href="class_c_r_c16.html#a0074af6197fe02821317000c9579a6af">CRC16::CRC16</a></div><div class="ttdeci">CRC16()</div><div class="ttdef"><b>Definition:</b> CRC16.cpp:4</div></div>
+<div class="ttc" id="aclass_c_r_c16_html_a32d81b429375e14543552ec937e40a80"><div class="ttname"><a href="class_c_r_c16.html#a32d81b429375e14543552ec937e40a80">CRC16::CRCcheck</a></div><div class="ttdeci">bool CRCcheck(uint8_t *data_p, uint16_t length, uint16_t crc)</div><div class="ttdef"><b>Definition:</b> CRC16.cpp:34</div></div>
+<div class="ttc" id="aclass_c_r_c16_html_a5473652b6a07d29a867b3b8836768160"><div class="ttname"><a href="class_c_r_c16.html#a5473652b6a07d29a867b3b8836768160">CRC16::CRCprocessByte</a></div><div class="ttdeci">uint16_t CRCprocessByte(uint8_t data)</div><div class="ttdef"><b>Definition:</b> CRC16.cpp:9</div></div>
+<div class="ttc" id="aclass_c_r_c16_html"><div class="ttname"><a href="class_c_r_c16.html">CRC16</a></div><div class="ttdef"><b>Definition:</b> CRC16.h:9</div></div>
+<div class="ttc" id="aclass_c_r_c16_html_aae22e2b7c6b2b96d76bd04ab28caf6d4"><div class="ttname"><a href="class_c_r_c16.html#aae22e2b7c6b2b96d76bd04ab28caf6d4">CRC16::crc</a></div><div class="ttdeci">uint16_t crc</div><div class="ttdef"><b>Definition:</b> CRC16.h:19</div></div>
+<div class="ttc" id="aclass_c_r_c16_html_a3aa4e867086e16f482a80e956f074984"><div class="ttname"><a href="class_c_r_c16.html#a3aa4e867086e16f482a80e956f074984">CRC16::CRCprocessBuffer</a></div><div class="ttdeci">uint16_t CRCprocessBuffer(const uint8_t *data_p, int length)</div><div class="ttdef"><b>Definition:</b> CRC16.cpp:24</div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Généré par &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.18
+</small></address>
+</body>
+</html>

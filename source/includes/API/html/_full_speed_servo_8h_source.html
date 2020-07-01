@@ -1,0 +1,135 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.18"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Documentation Cpp Arduino:  Fichier source de common/FullSpeedServo.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="logo_arduino.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Documentation Cpp Arduino
+   &#160;<span id="projectnumber">1.1</span>
+   </div>
+   <div id="projectbrief">Bienvenue dans la documentation Cpp (arduino) du club robot</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.8.18 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Recherche');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_4574b85c0abcef1e41f0bb02fb9bfbe2.html">common</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">FullSpeedServo.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_full_speed_servo_8h.html">Aller à la documentation de ce fichier.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef __FULLSPEEDSERVO_H__</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define __FULLSPEEDSERVO_H__</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_clock_8h.html">Clock.h</a>&quot;</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &lt;Servo.h&gt;</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_periodic_process_8h.html">PeriodicProcess.h</a>&quot;</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160; </div>
+<div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="class_full_speed_servo.html">   14</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_full_speed_servo.html">FullSpeedServo</a> : <span class="keyword">public</span> <a class="code" href="class_periodic_process.html">PeriodicProcess</a>{</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160; </div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="keyword">private</span>: </div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
+<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="class_full_speed_servo.html#a453f2767322e4005d88ff65a5affe487">   18</a></span>&#160;    Servo <a class="code" href="class_full_speed_servo.html#a453f2767322e4005d88ff65a5affe487">m_servo</a>;</div>
+<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="class_full_speed_servo.html#aae3581715bd3c9cc857e3820db7367c9">   19</a></span>&#160;    <span class="keywordtype">float</span> <a class="code" href="class_full_speed_servo.html#aae3581715bd3c9cc857e3820db7367c9">m_time</a>;</div>
+<div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="class_full_speed_servo.html#a03060af0666da66c054bccce40a964ed">   20</a></span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="class_full_speed_servo.html#a03060af0666da66c054bccce40a964ed">m_moving</a>;</div>
+<div class="line"><a name="l00021"></a><span class="lineno"><a class="line" href="class_full_speed_servo.html#a7a473a2c864f2cf416fae8360b80d113">   21</a></span>&#160;    <a class="code" href="class_clock.html">Clock</a> <a class="code" href="class_full_speed_servo.html#a7a473a2c864f2cf416fae8360b80d113">m_clock</a>;</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160; </div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; </div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_full_speed_servo.html#a221f58433c16eac8613fb5058e0c0526">SpeedWrite</a>(<span class="keywordtype">int</span> setpoint, <span class="keywordtype">float</span> time);</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160; </div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_full_speed_servo.html#aa065d2f4ce0c1110a5a84d62b4dc8385">write</a>(<span class="keywordtype">int</span> setpoint);</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; </div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_full_speed_servo.html#ab5af708a2e612228faa6bed800d79ea2">attach</a>(<span class="keywordtype">int</span> pin);</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_full_speed_servo.html#a159190845ac4de88fe533dc71247166f">detach</a>();</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160; </div>
+<div class="line"><a name="l00046"></a><span class="lineno"><a class="line" href="class_full_speed_servo.html#abd9583b7b5f6e918f295918eeb79a777">   46</a></span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="class_full_speed_servo.html#abd9583b7b5f6e918f295918eeb79a777">attached</a>(){<span class="keywordflow">return</span> <a class="code" href="class_full_speed_servo.html#a453f2767322e4005d88ff65a5affe487">m_servo</a>.attached();}</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160; </div>
+<div class="line"><a name="l00051"></a><span class="lineno"><a class="line" href="class_full_speed_servo.html#a9877b6c705724403c10656116a6084c0">   51</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="class_full_speed_servo.html#a9877b6c705724403c10656116a6084c0">read</a>(){<span class="keywordflow">return</span> <a class="code" href="class_full_speed_servo.html#a453f2767322e4005d88ff65a5affe487">m_servo</a>.read();}</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160; </div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    </div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_full_speed_servo.html#a219f6a6330241256242c6c77c5fa045e">process</a>(<span class="keywordtype">float</span> timestep);</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    </div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;};</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160; </div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;<span class="preprocessor">#endif</span></div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="aclass_full_speed_servo_html_a03060af0666da66c054bccce40a964ed"><div class="ttname"><a href="class_full_speed_servo.html#a03060af0666da66c054bccce40a964ed">FullSpeedServo::m_moving</a></div><div class="ttdeci">bool m_moving</div><div class="ttdef"><b>Definition:</b> FullSpeedServo.h:20</div></div>
+<div class="ttc" id="aclass_full_speed_servo_html_a219f6a6330241256242c6c77c5fa045e"><div class="ttname"><a href="class_full_speed_servo.html#a219f6a6330241256242c6c77c5fa045e">FullSpeedServo::process</a></div><div class="ttdeci">virtual void process(float timestep)</div><div class="ttdoc">Méthode à implémenter obligatoirement pour hériter de PeriodicProcess.</div><div class="ttdef"><b>Definition:</b> FullSpeedServo.cpp:24</div></div>
+<div class="ttc" id="aclass_full_speed_servo_html_aae3581715bd3c9cc857e3820db7367c9"><div class="ttname"><a href="class_full_speed_servo.html#aae3581715bd3c9cc857e3820db7367c9">FullSpeedServo::m_time</a></div><div class="ttdeci">float m_time</div><div class="ttdef"><b>Definition:</b> FullSpeedServo.h:19</div></div>
+<div class="ttc" id="aclass_periodic_process_html"><div class="ttname"><a href="class_periodic_process.html">PeriodicProcess</a></div><div class="ttdoc">Classe à implémenter pour gérer les appels dans la loop.</div><div class="ttdef"><b>Definition:</b> PeriodicProcess.h:16</div></div>
+<div class="ttc" id="a_periodic_process_8h_html"><div class="ttname"><a href="_periodic_process_8h.html">PeriodicProcess.h</a></div></div>
+<div class="ttc" id="aclass_full_speed_servo_html_a221f58433c16eac8613fb5058e0c0526"><div class="ttname"><a href="class_full_speed_servo.html#a221f58433c16eac8613fb5058e0c0526">FullSpeedServo::SpeedWrite</a></div><div class="ttdeci">void SpeedWrite(int setpoint, float time)</div><div class="ttdoc">Fait tourner le servomoteur pendant le temps donné ou jusqu'à la position demandée.</div><div class="ttdef"><b>Definition:</b> FullSpeedServo.cpp:5</div></div>
+<div class="ttc" id="aclass_full_speed_servo_html_abd9583b7b5f6e918f295918eeb79a777"><div class="ttname"><a href="class_full_speed_servo.html#abd9583b7b5f6e918f295918eeb79a777">FullSpeedServo::attached</a></div><div class="ttdeci">bool attached()</div><div class="ttdoc">Permet de savoir si le servo est attaché ou pas (respectivement maintient sa position / roue libre)</div><div class="ttdef"><b>Definition:</b> FullSpeedServo.h:46</div></div>
+<div class="ttc" id="aclass_clock_html"><div class="ttname"><a href="class_clock.html">Clock</a></div><div class="ttdoc">Utilitaire pour gérer le temps dans vos programmes Arduino.</div><div class="ttdef"><b>Definition:</b> Clock.h:14</div></div>
+<div class="ttc" id="aclass_full_speed_servo_html_a453f2767322e4005d88ff65a5affe487"><div class="ttname"><a href="class_full_speed_servo.html#a453f2767322e4005d88ff65a5affe487">FullSpeedServo::m_servo</a></div><div class="ttdeci">Servo m_servo</div><div class="ttdef"><b>Definition:</b> FullSpeedServo.h:18</div></div>
+<div class="ttc" id="aclass_full_speed_servo_html_a9877b6c705724403c10656116a6084c0"><div class="ttname"><a href="class_full_speed_servo.html#a9877b6c705724403c10656116a6084c0">FullSpeedServo::read</a></div><div class="ttdeci">int read()</div><div class="ttdoc">renvoie la dernière position envoyée au servo (seulement si le servo est &quot;attached&quot;)</div><div class="ttdef"><b>Definition:</b> FullSpeedServo.h:51</div></div>
+<div class="ttc" id="aclass_full_speed_servo_html_a7a473a2c864f2cf416fae8360b80d113"><div class="ttname"><a href="class_full_speed_servo.html#a7a473a2c864f2cf416fae8360b80d113">FullSpeedServo::m_clock</a></div><div class="ttdeci">Clock m_clock</div><div class="ttdef"><b>Definition:</b> FullSpeedServo.h:21</div></div>
+<div class="ttc" id="aclass_full_speed_servo_html_a159190845ac4de88fe533dc71247166f"><div class="ttname"><a href="class_full_speed_servo.html#a159190845ac4de88fe533dc71247166f">FullSpeedServo::detach</a></div><div class="ttdeci">void detach()</div><div class="ttdoc">Fonction réciproque de attach() (permet par exemple d'avoir un servomoteur en roue libre)</div><div class="ttdef"><b>Definition:</b> FullSpeedServo.cpp:20</div></div>
+<div class="ttc" id="a_clock_8h_html"><div class="ttname"><a href="_clock_8h.html">Clock.h</a></div></div>
+<div class="ttc" id="aclass_full_speed_servo_html_ab5af708a2e612228faa6bed800d79ea2"><div class="ttname"><a href="class_full_speed_servo.html#ab5af708a2e612228faa6bed800d79ea2">FullSpeedServo::attach</a></div><div class="ttdeci">void attach(int pin)</div><div class="ttdoc">Définit le pin sur lequel est connecté le serovmoteur.</div><div class="ttdef"><b>Definition:</b> FullSpeedServo.cpp:16</div></div>
+<div class="ttc" id="aclass_full_speed_servo_html"><div class="ttname"><a href="class_full_speed_servo.html">FullSpeedServo</a></div><div class="ttdoc">Pilotage de Servomoteur particulier.</div><div class="ttdef"><b>Definition:</b> FullSpeedServo.h:14</div></div>
+<div class="ttc" id="aclass_full_speed_servo_html_aa065d2f4ce0c1110a5a84d62b4dc8385"><div class="ttname"><a href="class_full_speed_servo.html#aa065d2f4ce0c1110a5a84d62b4dc8385">FullSpeedServo::write</a></div><div class="ttdeci">void write(int setpoint)</div><div class="ttdoc">Fait tourner le servomoteur jusqu'à la position demandée (vitesse normale)</div><div class="ttdef"><b>Definition:</b> FullSpeedServo.cpp:12</div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Généré par &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.18
+</small></address>
+</body>
+</html>

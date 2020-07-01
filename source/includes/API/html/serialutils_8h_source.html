@@ -1,0 +1,202 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.18"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Documentation Cpp Arduino:  Fichier source de common/serialutils.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="logo_arduino.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Documentation Cpp Arduino
+   &#160;<span id="projectnumber">1.1</span>
+   </div>
+   <div id="projectbrief">Bienvenue dans la documentation Cpp (arduino) du club robot</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.8.18 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Recherche');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_4574b85c0abcef1e41f0bb02fb9bfbe2.html">common</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">serialutils.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="serialutils_8h.html">Aller à la documentation de ce fichier.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef __SERIALUTILS_H__</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define __SERIALUTILS_H__</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">// This library is free software from Club robot Insa Rennes sources; you can redistribute it and/or</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment">// modify it under the terms of the GNU Lesser General Public</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment">// License as published by the Free Software Foundation; either</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment">// version 2.1 of the License, or (at your option) any later version.</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment">// This library is distributed in the hope that it will be useful,</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment">// but WITHOUT ANY WARRANTY; without even the implied warranty of</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment">// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment">// Lesser General Public License for more details.</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160; </div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#ifdef ARDUINO</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#include &lt;Arduino.h&gt;</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#else</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="serialutils_8h.html#a0c8186d9b9b7880309c27230bbb5e69d">   18</a></span>&#160;<span class="keyword">typedef</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> <a class="code" href="serialutils_8h.html#a0c8186d9b9b7880309c27230bbb5e69d">byte</a>;</div>
+<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="serialutils_8h.html#afbeda3fd1bdc8c37d01bdf9f5c8274ff">   19</a></span>&#160;<span class="keyword">typedef</span> std::string <a class="code" href="serialutils_8h.html#afbeda3fd1bdc8c37d01bdf9f5c8274ff">String</a>;</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160; </div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="comment">// Serializer</span></div>
+<div class="line"><a name="l00032"></a><span class="lineno"><a class="line" href="struct_serializer.html">   32</a></span>&#160;<span class="comment"></span><span class="keyword">struct </span><a class="code" href="struct_serializer.html">Serializer</a></div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;{</div>
+<div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="struct_serializer.html#a2c1edbc67c09dcfffe63194038fd9566">   34</a></span>&#160;    <span class="keywordtype">byte</span>* <a class="code" href="struct_serializer.html#a2c1edbc67c09dcfffe63194038fd9566">buffer</a>;</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; </div>
+<div class="line"><a name="l00039"></a><span class="lineno"><a class="line" href="struct_serializer.html#aff15a74ed17c990475261e4d1319ca7a">   39</a></span>&#160;    <a class="code" href="struct_serializer.html#aff15a74ed17c990475261e4d1319ca7a">Serializer</a>(<span class="keywordtype">byte</span> <a class="code" href="struct_serializer.html#a2c1edbc67c09dcfffe63194038fd9566">buffer</a>[]) : <a class="code" href="struct_serializer.html#a2c1edbc67c09dcfffe63194038fd9566">buffer</a>(<a class="code" href="struct_serializer.html#a2c1edbc67c09dcfffe63194038fd9566">buffer</a>){}</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160; </div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160; </div>
+<div class="line"><a name="l00047"></a><span class="lineno"><a class="line" href="struct_serializer.html#a984119e4cc29ca38db4c193b70efe211">   47</a></span>&#160;    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt; <a class="code" href="struct_serializer.html">Serializer</a>&amp; <a class="code" href="struct_serializer.html#a984119e4cc29ca38db4c193b70efe211">operator&lt;&lt;</a>(<span class="keyword">const</span> T&amp; <span class="keywordtype">object</span>)</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    {</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        <a class="code" href="struct_serializer.html#a1ee0f154ba82fc4cfb1bf596debc69d4">write</a>(<span class="keywordtype">object</span>);</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    }</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160; </div>
+<div class="line"><a name="l00057"></a><span class="lineno"><a class="line" href="struct_serializer.html#a1ee0f154ba82fc4cfb1bf596debc69d4">   57</a></span>&#160;    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt; <span class="keywordtype">void</span> <a class="code" href="struct_serializer.html#a1ee0f154ba82fc4cfb1bf596debc69d4">write</a>(<span class="keyword">const</span> T&amp; <span class="keywordtype">object</span>)</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    {</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;        *(T*)(<a class="code" href="struct_serializer.html#a2c1edbc67c09dcfffe63194038fd9566">buffer</a>) = object;</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;        <a class="code" href="struct_serializer.html#a2c1edbc67c09dcfffe63194038fd9566">buffer</a> += <span class="keyword">sizeof</span>(T);</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    }</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160; </div>
+<div class="line"><a name="l00067"></a><span class="lineno"><a class="line" href="struct_serializer.html#ac0afd6edf14f126f8c7f95d670d83d0b">   67</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="struct_serializer.html#ac0afd6edf14f126f8c7f95d670d83d0b">write</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* <span class="keywordtype">string</span>)</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    {</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        <span class="keywordflow">do</span></div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;            <a class="code" href="struct_serializer.html#a1ee0f154ba82fc4cfb1bf596debc69d4">write</a>(*<span class="keywordtype">string</span>);</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;        <span class="keywordflow">while</span> (*(<span class="keywordtype">string</span>++) != <span class="charliteral">&#39;\0&#39;</span>);</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    }</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;};</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160; </div>
+<div class="line"><a name="l00075"></a><span class="lineno"><a class="line" href="struct_serializer.html#a1538c2a1dbc7eca145e370c1a1619d59">   75</a></span>&#160;<span class="keyword">template</span>&lt;&gt; <span class="keyword">inline</span> <span class="keywordtype">void</span> Serializer::write&lt;String&gt;(<span class="keyword">const</span> <a class="code" href="serialutils_8h.html#afbeda3fd1bdc8c37d01bdf9f5c8274ff">String</a>&amp; <span class="keywordtype">string</span>)</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;{</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    <a class="code" href="struct_serializer.html#a1ee0f154ba82fc4cfb1bf596debc69d4">write</a>(<span class="keywordtype">string</span>.c_str());</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;}</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160; </div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160; </div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;<span class="comment">// Deserializer</span></div>
+<div class="line"><a name="l00090"></a><span class="lineno"><a class="line" href="struct_deserializer.html">   90</a></span>&#160;<span class="comment"></span><span class="keyword">struct </span><a class="code" href="struct_deserializer.html">Deserializer</a></div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;{</div>
+<div class="line"><a name="l00092"></a><span class="lineno"><a class="line" href="struct_deserializer.html#a37f4bae0d8a61c6c556ba3e90a10f0c4">   92</a></span>&#160;    <span class="keywordtype">byte</span>* <a class="code" href="struct_deserializer.html#a37f4bae0d8a61c6c556ba3e90a10f0c4">buffer</a>;</div>
+<div class="line"><a name="l00093"></a><span class="lineno"><a class="line" href="struct_deserializer.html#abdff6f48d2c464a94a0e6f646e081ba3">   93</a></span>&#160;    <span class="keywordtype">byte</span>* <a class="code" href="struct_deserializer.html#abdff6f48d2c464a94a0e6f646e081ba3">adr</a>;</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160; </div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160; </div>
+<div class="line"><a name="l00100"></a><span class="lineno"><a class="line" href="struct_deserializer.html#ae6463833d115113e2d7ed91c79d0c988">  100</a></span>&#160;    <a class="code" href="struct_deserializer.html#ae6463833d115113e2d7ed91c79d0c988">Deserializer</a>(<span class="keywordtype">byte</span> <a class="code" href="struct_deserializer.html#a37f4bae0d8a61c6c556ba3e90a10f0c4">buffer</a>[]) : <a class="code" href="struct_deserializer.html#a37f4bae0d8a61c6c556ba3e90a10f0c4">buffer</a>(<a class="code" href="struct_deserializer.html#a37f4bae0d8a61c6c556ba3e90a10f0c4">buffer</a>), <a class="code" href="struct_deserializer.html#abdff6f48d2c464a94a0e6f646e081ba3">adr</a>(<a class="code" href="struct_deserializer.html#a37f4bae0d8a61c6c556ba3e90a10f0c4">buffer</a>){}</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160; </div>
+<div class="line"><a name="l00107"></a><span class="lineno"><a class="line" href="struct_deserializer.html#acda0fe1ee62c4f5de3d70104a20bc41a">  107</a></span>&#160;    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt; <a class="code" href="struct_deserializer.html">Deserializer</a>&amp; <a class="code" href="struct_deserializer.html#acda0fe1ee62c4f5de3d70104a20bc41a">operator&gt;&gt;</a>(T&amp; <span class="keywordtype">object</span>)</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;    {</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;        <span class="keywordtype">object</span> = read&lt;T&gt;();</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;        <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;    }</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160; </div>
+<div class="line"><a name="l00118"></a><span class="lineno"><a class="line" href="struct_deserializer.html#aef72a346514298e1e71e69e9aef3b96f">  118</a></span>&#160;    <a class="code" href="struct_deserializer.html">Deserializer</a>&amp; <a class="code" href="struct_deserializer.html#aef72a346514298e1e71e69e9aef3b96f">operator&gt;&gt;</a>(<span class="keywordtype">char</span>* <span class="keywordtype">string</span>)</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;    {</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;        <span class="keywordflow">do</span></div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;            *<span class="keywordtype">string</span> = read&lt;char&gt;();</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;        <span class="keywordflow">while</span> ((*<span class="keywordtype">string</span>++) != <span class="charliteral">&#39;\0&#39;</span>);</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;        <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;    }</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160; </div>
+<div class="line"><a name="l00130"></a><span class="lineno"><a class="line" href="struct_deserializer.html#af93dc898d561ad0b1d8b86ddf49053ca">  130</a></span>&#160;    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt; T <a class="code" href="struct_deserializer.html#af93dc898d561ad0b1d8b86ddf49053ca">read</a>()</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;    {</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;        <span class="keywordtype">byte</span>* address = <a class="code" href="struct_deserializer.html#a37f4bae0d8a61c6c556ba3e90a10f0c4">buffer</a>;</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;        <a class="code" href="struct_deserializer.html#a37f4bae0d8a61c6c556ba3e90a10f0c4">buffer</a> += <span class="keyword">sizeof</span>(T);</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;        <span class="keywordflow">return</span> *(T*)(address);</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;    }</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160; </div>
+<div class="line"><a name="l00137"></a><span class="lineno"><a class="line" href="struct_deserializer.html#acc3dc7a9d03ad50f5a7f139ab44f5dd5">  137</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="struct_deserializer.html#acc3dc7a9d03ad50f5a7f139ab44f5dd5">clear</a>()</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;    {</div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;        free(<a class="code" href="struct_deserializer.html#abdff6f48d2c464a94a0e6f646e081ba3">adr</a>);</div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;    }</div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160; </div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;};</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160; </div>
+<div class="line"><a name="l00144"></a><span class="lineno"><a class="line" href="struct_deserializer.html#aefa095423e11239219f8a472547a6d22">  144</a></span>&#160;<span class="keyword">template</span>&lt;&gt; <span class="keyword">inline</span> <a class="code" href="serialutils_8h.html#afbeda3fd1bdc8c37d01bdf9f5c8274ff">String</a> Deserializer::read&lt;String&gt;()</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;{</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;    <a class="code" href="serialutils_8h.html#afbeda3fd1bdc8c37d01bdf9f5c8274ff">String</a> string((<span class="keywordtype">char</span>*)(<a class="code" href="struct_deserializer.html#a37f4bae0d8a61c6c556ba3e90a10f0c4">buffer</a>));</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;    <a class="code" href="struct_deserializer.html#a37f4bae0d8a61c6c556ba3e90a10f0c4">buffer</a> += <span class="keywordtype">string</span>.length() + 1;</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;    <span class="keywordflow">return</span> string; </div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;}</div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160; </div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160; </div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160; </div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;<span class="preprocessor">#endif // __SERIALUTILS_H__</span></div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="astruct_deserializer_html_a37f4bae0d8a61c6c556ba3e90a10f0c4"><div class="ttname"><a href="struct_deserializer.html#a37f4bae0d8a61c6c556ba3e90a10f0c4">Deserializer::buffer</a></div><div class="ttdeci">byte * buffer</div><div class="ttdef"><b>Definition:</b> serialutils.h:92</div></div>
+<div class="ttc" id="astruct_serializer_html_a984119e4cc29ca38db4c193b70efe211"><div class="ttname"><a href="struct_serializer.html#a984119e4cc29ca38db4c193b70efe211">Serializer::operator&lt;&lt;</a></div><div class="ttdeci">Serializer &amp; operator&lt;&lt;(const T &amp;object)</div><div class="ttdoc">Operateur de décalage, a utilisé pour remplir le buffer.</div><div class="ttdef"><b>Definition:</b> serialutils.h:47</div></div>
+<div class="ttc" id="astruct_serializer_html"><div class="ttname"><a href="struct_serializer.html">Serializer</a></div><div class="ttdoc">Objet destiné à creer un flux de sortie pour les programme cpp.</div><div class="ttdef"><b>Definition:</b> serialutils.h:33</div></div>
+<div class="ttc" id="aserialutils_8h_html_a0c8186d9b9b7880309c27230bbb5e69d"><div class="ttname"><a href="serialutils_8h.html#a0c8186d9b9b7880309c27230bbb5e69d">byte</a></div><div class="ttdeci">unsigned char byte</div><div class="ttdef"><b>Definition:</b> serialutils.h:18</div></div>
+<div class="ttc" id="astruct_serializer_html_aff15a74ed17c990475261e4d1319ca7a"><div class="ttname"><a href="struct_serializer.html#aff15a74ed17c990475261e4d1319ca7a">Serializer::Serializer</a></div><div class="ttdeci">Serializer(byte buffer[])</div><div class="ttdoc">Constructeur de Serializer.</div><div class="ttdef"><b>Definition:</b> serialutils.h:39</div></div>
+<div class="ttc" id="astruct_deserializer_html_ae6463833d115113e2d7ed91c79d0c988"><div class="ttname"><a href="struct_deserializer.html#ae6463833d115113e2d7ed91c79d0c988">Deserializer::Deserializer</a></div><div class="ttdeci">Deserializer(byte buffer[])</div><div class="ttdoc">Constructeur de Deserializer.</div><div class="ttdef"><b>Definition:</b> serialutils.h:100</div></div>
+<div class="ttc" id="aserialutils_8h_html_afbeda3fd1bdc8c37d01bdf9f5c8274ff"><div class="ttname"><a href="serialutils_8h.html#afbeda3fd1bdc8c37d01bdf9f5c8274ff">String</a></div><div class="ttdeci">std::string String</div><div class="ttdef"><b>Definition:</b> serialutils.h:19</div></div>
+<div class="ttc" id="astruct_deserializer_html_acda0fe1ee62c4f5de3d70104a20bc41a"><div class="ttname"><a href="struct_deserializer.html#acda0fe1ee62c4f5de3d70104a20bc41a">Deserializer::operator&gt;&gt;</a></div><div class="ttdeci">Deserializer &amp; operator&gt;&gt;(T &amp;object)</div><div class="ttdoc">Operateur de décalage, à utiliser pour extraire les variables du buffer.</div><div class="ttdef"><b>Definition:</b> serialutils.h:107</div></div>
+<div class="ttc" id="astruct_serializer_html_a1ee0f154ba82fc4cfb1bf596debc69d4"><div class="ttname"><a href="struct_serializer.html#a1ee0f154ba82fc4cfb1bf596debc69d4">Serializer::write</a></div><div class="ttdeci">void write(const T &amp;object)</div><div class="ttdoc">Methode pour une utilisation interne qui permet d'écrire sur le buffer après conversion en octets.</div><div class="ttdef"><b>Definition:</b> serialutils.h:57</div></div>
+<div class="ttc" id="astruct_deserializer_html_abdff6f48d2c464a94a0e6f646e081ba3"><div class="ttname"><a href="struct_deserializer.html#abdff6f48d2c464a94a0e6f646e081ba3">Deserializer::adr</a></div><div class="ttdeci">byte * adr</div><div class="ttdef"><b>Definition:</b> serialutils.h:93</div></div>
+<div class="ttc" id="astruct_deserializer_html_aef72a346514298e1e71e69e9aef3b96f"><div class="ttname"><a href="struct_deserializer.html#aef72a346514298e1e71e69e9aef3b96f">Deserializer::operator&gt;&gt;</a></div><div class="ttdeci">Deserializer &amp; operator&gt;&gt;(char *string)</div><div class="ttdoc">Operateur de décalage, a utilisé pour remplir le buffer uniquement pour les variables de type char.</div><div class="ttdef"><b>Definition:</b> serialutils.h:118</div></div>
+<div class="ttc" id="astruct_deserializer_html_acc3dc7a9d03ad50f5a7f139ab44f5dd5"><div class="ttname"><a href="struct_deserializer.html#acc3dc7a9d03ad50f5a7f139ab44f5dd5">Deserializer::clear</a></div><div class="ttdeci">void clear()</div><div class="ttdef"><b>Definition:</b> serialutils.h:137</div></div>
+<div class="ttc" id="astruct_deserializer_html"><div class="ttname"><a href="struct_deserializer.html">Deserializer</a></div><div class="ttdoc">Objet destiné à extraire des variables d'un flux en octet.</div><div class="ttdef"><b>Definition:</b> serialutils.h:91</div></div>
+<div class="ttc" id="astruct_serializer_html_ac0afd6edf14f126f8c7f95d670d83d0b"><div class="ttname"><a href="struct_serializer.html#ac0afd6edf14f126f8c7f95d670d83d0b">Serializer::write</a></div><div class="ttdeci">void write(const char *string)</div><div class="ttdoc">Methode pour une utilisation interne qui permet d'écrire sur le buffer après conversion en octets.</div><div class="ttdef"><b>Definition:</b> serialutils.h:67</div></div>
+<div class="ttc" id="astruct_serializer_html_a2c1edbc67c09dcfffe63194038fd9566"><div class="ttname"><a href="struct_serializer.html#a2c1edbc67c09dcfffe63194038fd9566">Serializer::buffer</a></div><div class="ttdeci">byte * buffer</div><div class="ttdef"><b>Definition:</b> serialutils.h:34</div></div>
+<div class="ttc" id="astruct_deserializer_html_af93dc898d561ad0b1d8b86ddf49053ca"><div class="ttname"><a href="struct_deserializer.html#af93dc898d561ad0b1d8b86ddf49053ca">Deserializer::read</a></div><div class="ttdeci">T read()</div><div class="ttdoc">Methode interne pour convertir les octets du buffer en données exploitables.</div><div class="ttdef"><b>Definition:</b> serialutils.h:130</div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Généré par &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.18
+</small></address>
+</body>
+</html>
