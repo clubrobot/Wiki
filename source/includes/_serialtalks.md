@@ -1,6 +1,6 @@
 # SerialTalks
 
-## Préambule
+### Préambule
 
 La librairie SerialTalks assure la communication entre ordinateur(PC ou Raspberry) et arduino. On trouve dans cette librairie deux versions differentes pour chaque terminal.
 
@@ -23,7 +23,7 @@ Quand une requêtes depuis l’ordinateur est envoyé à l’Arduino, il y a deu
 - Si notre requête ne requière aucun retour, dans ce cas le packet va déclenché une fonction dans l’Arduino.
 - Si notre requête requière un retour, l’Arduino après avoir exécuté la fonction associé à l’OP code reçu va renvoyer ça réponse grâce au code esclave et le Retcode qui a été envoyé dans le packet reçu.
 
-## Introduction
+### Introduction
 
 Avant de commencer la documentation, quelques explications sont nécessaires pour mieux comprendre l’architecture de la librairie. Dans un premier temps, la librairie a besoin de sérialiser et de désérialiser, ces objets sont explicités dans la page SerialUtils. Les autres points importants de cette librairie sont les types de variables, il en existe un certain nombres et il vaut mieux être claire sur les rôles de chacun.
 
@@ -39,9 +39,11 @@ void INSTRUCTION_NAME(SerialTalks& talks, Deserializer& input, Serializer& outpu
 
 Le dernier type utilisé est le `ostream`. C’est une classe de SeriaTalks qui a pour but de créer un autre canal virtuel de communication avec le serial. Ces canaux sont utilisés pour les erreurs et les sorties de l’Arduino. On dit que le canal est virtuel, car il utilise en réalité le même canal que les autres informations, mais avec un retcode bien spécifique.
 
-## Utillisation
+### Utillisation
 
 L’utilisation de cette librairie est centrale dans la programmation des Arduinos. En effet, c’est le seul moyen en place pour communiquer avec les Arduinos depuis un ordinateur. Il est donc important de bien savoir utiliser cette librairie avant une quelconque programmation d’Arduino.
+
+## Include
 
 La premier étape est l’importation de cette lib dans votre code.
 
@@ -59,6 +61,8 @@ L’importation de ce header vous donne accès à l’objet `talks` instance de 
 La constante se situe dans le fichier <code>SerialTalks.h</code>.
 </aside>
 
+## Setup C++
+
 Voici les lignes correspondantes à la creation du stream et de l’association à SerialTalks en C++.
 
 ```cpp
@@ -68,6 +72,8 @@ void setup()
     talks.begin(Serial);
 }
 ```
+
+## Loop
 
 la dernière étape pour bien executer les communication est d’ajouter l’appel de talks à chaque boucle avec la ligne :
 
@@ -79,7 +85,11 @@ void loop()
 
 Le SerialTalks est bien paramétré et peux recevoir et envoyer des informations. Il manque plus qu’à ajouter des fonctions pour répondre à des requêtes.
 
+## Ajout des instructions
+
 Pour commencer, il faut choisir un OPCode associé à la fonction à ajouter. Cet OPCode devra être renseigné dans le code Python pour pouvoir appeler correctement la méthode Arduino. Il existe plusieurs façon de stoquer cette valeur mais on préfèrera utilés un header et les `#define`. Voici un exemple de `instruction.h` de l’Arduino WheeledBase.
+
+### Header
 
 ```cpp
 #ifndef __INSTRUCTIONS_H__
@@ -109,6 +119,8 @@ Pour commencer, il faut choisir un OPCode associé à la fonction à ajouter. Ce
 #define RESET_PUREPURSUIT_OPCODE        0x10
 #define ADD_PUREPURSUIT_WAYPOINT_OPCODE 0x11
 ```
+
+### Source
 
 Il est également conseillé de faire les fonctions pour gérer les instructions dans un `instruction.cpp`. Pour cela faire les imports nécessaire et utiliser les externs var dans votre code pour pouvoir compiler. Voici un autre exemple de `instruction.cpp`
 
@@ -148,6 +160,8 @@ void SET_OPENLOOP_VELOCITIES(SerialTalks& talks, Deserializer& input, Serializer
 }
 ```
 
+## Bind
+
 Une fois que les fonctions sont créer avec les OPcode définis. Il ne reste plus qu’a associer le tout dans le SerialTalks. Cette opération dois être faite dans le setup du fichier `.ino` . Il est toutefois préférable d’executer cette opération après la création du socket. Voici un exemple d’association :
 
 ```cpp
@@ -163,12 +177,16 @@ void setup()
 
 ```
 
+## Setup Python
+
 Coté Python, il suffit ensuite de créer l’objet de le connecter coté python comme ceci :
 
 ```python
 arduino = SerialTalks('ardresse')
 arduino.connect()
 ```
+
+## Heritage Python
 
 Il est également possible de créer une classe fille en la faisant hériter de Seriatlaks en python
 
@@ -184,6 +202,8 @@ class Arduino(SerialTalks):
 Il est possible de ne pas écrire l’init si votre nouvelle object n’a pas besoin de variable pour son initialisation.
 </aside>
 
+## Methode Python
+
 Ensuite il faut ajouter à cette classe des méthodes qui correspondront à des OP code. Voici un exemple simple d’envoi d’une variable float à l’Arduino.
 
 ```python
@@ -192,6 +212,8 @@ def set_openloop_velocities(self, left, right):
 ```
 
 On peut voir dans cette méthode l’utilisation de l’objet `FLOAT`, cette object venu tout droit de la librairie SerialUtils permet la conversion en bytes. Les objets de conversions sont expliqués dans le chapitre [SerialUtils](https://clubrobot.github.io/Wiki/?cpp#serialutils).
+
+## OPCODE Python
 
 Pour indiquer l’OP code, il est vivement conseillé d’utiliser des constantes à definir en haut de votre fichier python de préférence en hexadécimal. Comme dans l’exemple ci contre.
 
