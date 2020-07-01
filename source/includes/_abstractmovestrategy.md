@@ -10,7 +10,7 @@ Pour résoudre le problème, TurnOnTheSpot utilise un algorithme simple. Le prin
 
 Voici un shéma représentant les deux bases :
 
-![TurnOnTheSpot](../images/abstractMoveStrategy/shema_turonthespot.png)
+![TurnOnTheSpot](../images/abstractMoveStrategy/shema_turnonthespot.png)
 
 On peux voir la base normale (x,y) et la base du robot (u,v).
 
