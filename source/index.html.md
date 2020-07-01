@@ -11,6 +11,7 @@ toc_footers:
 
 includes:
   - projectstructure
+  - setup
   - serialtalks
 
 search: true
