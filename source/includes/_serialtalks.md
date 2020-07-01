@@ -89,7 +89,9 @@ Le SerialTalks est bien paramétré et peux recevoir et envoyer des informations
 
 Pour commencer, il faut choisir un OPCode associé à la fonction à ajouter. Cet OPCode devra être renseigné dans le code Python pour pouvoir appeler correctement la méthode Arduino. Il existe plusieurs façon de stoquer cette valeur mais on préfèrera utilés un header et les `#define`. Voici un exemple de `instruction.h` de l’Arduino WheeledBase.
 
-### Header
+## Header
+
+On défini ici tout les opcode et les prototypes de chaques instructions.
 
 ```cpp
 #ifndef __INSTRUCTIONS_H__
@@ -120,7 +122,7 @@ Pour commencer, il faut choisir un OPCode associé à la fonction à ajouter. Ce
 #define ADD_PUREPURSUIT_WAYPOINT_OPCODE 0x11
 ```
 
-### Source
+## Source
 
 Il est également conseillé de faire les fonctions pour gérer les instructions dans un `instruction.cpp`. Pour cela faire les imports nécessaire et utiliser les externs var dans votre code pour pouvoir compiler. Voici un autre exemple de `instruction.cpp`
 
@@ -222,7 +224,7 @@ OPCODE = 0xF4
 ```
 
 <aside class="warning">
-Avertissement - Les opcodes suivants sont réservés par la lib et ne doivent pas être utilisés par vos objects : `0x00` , `0x01` , `0x02`, ....
+Avertissement - Les opcodes suivants sont réservés par la lib et ne doivent pas être utilisés par vos objets : `0x00` , `0x01` , `0x02`, ....
 </aside>
 
 ## API

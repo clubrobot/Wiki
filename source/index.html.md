@@ -1,9 +1,9 @@
 ---
 title: Club Robot API Reference
 
-language_tabs: # must be one of https://git.io/vQNgJ
-  - cpp
-  - python
+# language_tabs: # must be one of https://git.io/vQNgJ
+#   - cpp
+#   - python
 
 toc_footers:
   - <a href='#'>Sign Up for a Developer Key</a>
@@ -49,8 +49,6 @@ cout << "Hello World !" << endl;
 ```python
 print('Hello World !')
 ```
-
-> Hello World !
 
 <aside class="notice">
 Vous pouvez remplacer <code>Hello World !</code> par cotre propre message.
