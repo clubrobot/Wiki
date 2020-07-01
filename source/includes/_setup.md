@@ -17,3 +17,8 @@ cd team-2020
 ```
 
 ## Installation des librairies
+
+### Setup script
+
+Une fois dans le dossier 'team-2020', il vous suffit de lancer la commande ci-contre de façon a installer toutes les librairies.
+Cette commande configure egalement votre `PATH` vers les differents modules.

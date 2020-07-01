@@ -8,19 +8,19 @@ Le projet se strcture de la facon suivante :
 
 ```
 team-2020
-+- arduino : le code des cartes avec arduino
++- arduino
 | |
-| +- common : contient toutes les libs du club.
+| +- common
 | | +- xxx.h
 | | +- xxx.cpp
 | |
-| +- wheeledbase : exemple de carte actionneur : la base roulante.
+| +- wheeledbase
 | | +- main.ino
 | | +- instructions.h
 | | +- instructions.cpp
 | | +- makefile
 | |
-| +- actionneur_name : carte actionneur lambda
+| +- actionneur_name
 | | +- main.ino
 | | +- instructions.h
 | | +- instructions.cpp
@@ -28,19 +28,19 @@ team-2020
 | |
 | +- Module.mk
 |
-+- esp32 : le code des cartes avec esp32
++- esp32
 | |
-| +- common : contient toutes les libs du club.
+| +- common
 | | +- xxx.h
 | | +- xxx.cpp
 | |
-| +- wheeledbase : exemple de carte actionneur : la base roulante.
+| +- wheeledbase
 | | +- main.ino
 | | +- instructions.h
 | | +- instructions.cpp
 | | +- makefile
 | |
-| +- actionneur_name : carte actionneur lambda
+| +- actionneur_name
 | | +- main.ino
 | | +- instructions.h
 | | +- instructions.cpp
@@ -48,9 +48,27 @@ team-2020
 | |
 | +- Module.mk
 |
-+- raspberrypi : le code sur raspberrypi
++- raspberrypi
 | |
 | +- common
 | +- daughter_cards
 | +- robots
 ```
+
+### Arduino
+
+Cette section contient tout le code relatifs au cartes embarquées utillisant une ardino nano.
+
+Le dossier `common` contient toutes les librairies du club (Ex. `Odometry`, `AX12`, `Motor`, ...).
+
+Le dossier `wheelebase` est le code de la carte actionneur wheeledbase. Elle contient un `main.ino`,
+
+TODO
+
+### ESP32
+
+TODO
+
+### Raspberrypi
+
+TODO
