@@ -1,6 +1,6 @@
 # Structure du projet
 
-Notre projet est hébergé sur github à l'adresse suivante : https://github.com/clubrobot/
+Notre projet est hébergé sur github à l'adresse suivante : [https://github.com/clubrobot/](https://github.com/clubrobot/)
 
 Chaque année, un nouveau repo est crée, celui de l'année 2020 est dispnible [ici](https://github.com/clubrobot/team-2020).
 

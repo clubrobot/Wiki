@@ -22,3 +22,15 @@ cd team-2020
 
 Une fois dans le dossier 'team-2020', il vous suffit de lancer la commande ci-contre de façon a installer toutes les librairies.
 Cette commande configure egalement votre `PATH` vers les differents modules.
+
+```shell
+./setup.sh
+```
+
+## Premier build arduino
+
+TODO
+
+## Premier Script python
+
+TODO
