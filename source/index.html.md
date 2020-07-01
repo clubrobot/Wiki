@@ -10,9 +10,9 @@ toc_footers:
   - <a href='https://github.com/slatedocs/slate'>Documentation Powered by Slate</a>
 
 includes:
-  - _projectstructure.md.erb
-  - _setup.md.erb
-  - _abstractmovestrategy.md.erb
+  - projectstructure
+  - setup
+  - abstractmovestrategy
 #   - serialtalks
 
 search: true

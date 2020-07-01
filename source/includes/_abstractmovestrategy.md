@@ -10,7 +10,7 @@ Pour résoudre le problème, TurnOnTheSpot utilise un algorithme simple. Le prin
 
 Voici un shéma représentant les deux bases :
 
-<%= TurnOnTheSpot "images/abstractMoveStrategy/shema_turonthespot.png" %>
+![alt text](../images/abstractMoveStrategy/shema_turonthespot.png)
 
 On peux voir la base normale (x,y) et la base du robot (u,v).
 
@@ -36,4 +36,3 @@ La trajectoire a la particularité de suivre cette ligne avec des trajectoires c
 Le principe de Purpursuit est de générer un point à faire suivre au robot. Ce point est situé devant la projection du robot sur la droite. La distance de ce point cible est apellé lookahead. Une fois le point calculé, on en déduit les vitesses pour le rejoindre. L’astuce réside dans le fait que ce point va avancer en même temps que le robot jusqu’à la fin de la ligne brisée.
 
 GIF
-
