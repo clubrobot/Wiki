@@ -1,5 +1,5 @@
 ---
-title: API Reference
+title: Club Robot API Reference
 
 language_tabs: # must be one of https://git.io/vQNgJ
   - cpp
