@@ -33,23 +33,3 @@ Chaque morceau de code est expliqué dans la zone centrale et vous pouvez copier
 Également, lorsque du code python est disponible pour faire l'interface, il vous suffit de passer de l'onglet C++ à Python pour comprendre les interactions.
 
 Bonne Lecture :D
-
-# Hello World !
-
-Vous trouvez ici un simple exemple Hello World pour bien comprendre la façon dont le code sera expliqué dans la suite de ce wiki.
-
-```cpp
-#include <iostream>
-
-using namespace std;
-
-cout << "Hello World !" << endl;
-```
-
-```python
-print('Hello World !')
-```
-
-<aside class="notice">
-Vous pouvez remplacer <code>Hello World !</code> par cotre propre message.
-</aside>
