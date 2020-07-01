@@ -10,7 +10,7 @@ Pour résoudre le problème, TurnOnTheSpot utilise un algorithme simple. Le prin
 
 Voici un shéma représentant les deux bases :
 
-![TurnOnTheSpot](../images/abstractMoveStrategy/shema_turnonthespot.png)
+![TurnOnTheSpot](../images/abstractMoveStrategy/shema_turonthespot.png)
 
 On peux voir la base normale (x,y) et la base du robot (u,v).
 
@@ -25,7 +25,7 @@ La distance entre le centre du robot et la projection du centre de rotation sur 
 
 Voici un exemple de fonctionnement:
 
-![TurnOnTheSpot](../images/abstractMoveStrategy/gif_turnonthespot.gif)
+![TurnOnTheSpot](../images/abstractMoveStrategy/gif_turonthespot.gif)
 
 ## PurePursuit
 
