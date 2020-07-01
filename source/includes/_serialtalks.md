@@ -36,3 +36,171 @@ Le type `*Instruction` correspond à un pointeur de fonction dont la signature e
 ```cpp
 void INSTRUCTION_NAME(SerialTalks& talks, Deserializer& input, Serializer& output);
 ```
+
+Le dernier type utilisé est le `ostream`. C’est une classe de SeriaTalks qui a pour but de créer un autre canal virtuel de communication avec le serial. Ces canaux sont utilisés pour les erreurs et les sorties de l’Arduino. On dit que le canal est virtuel, car il utilise en réalité le même canal que les autres informations, mais avec un retcode bien spécifique.
+
+## Utillisation
+
+L’utilisation de cette librairie est centrale dans la programmation des Arduinos. En effet, c’est le seul moyen en place pour communiquer avec les Arduinos depuis un ordinateur. Il est donc important de bien savoir utiliser cette librairie avant une quelconque programmation d’Arduino.
+
+La premier étape est l’importation de cette lib dans votre code.
+
+```cpp
+#include "../common/SerialTalks.h"
+```
+
+```python
+from serialTalks import *
+```
+
+L’importation de ce header vous donne accès à l’objet `talks` instance de SerialTalks. Il faut ensuite creer un stream pour commencer à comuniquer avec SerialTalks. Il est important de bien faire correspondre le baudrate et d’utiliser la constante `SERIALTALKS_BAUDRATE`.
+
+<aside class="notice">
+La constante se situe dans le fichier <code>SerialTalks.h</code>.
+</aside>
+
+Voici les lignes correspondantes à la creation du stream et de l’association à SerialTalks en C++.
+
+```cpp
+void setup()
+{
+    Serial.begin(SERIALTALKS_BAUDRATE);
+    talks.begin(Serial);
+}
+```
+
+la dernière étape pour bien executer les communication est d’ajouter l’appel de talks à chaque boucle avec la ligne :
+
+```cpp
+void loop()
+{
+    talks.execute();
+```
+
+Le SerialTalks est bien paramétré et peux recevoir et envoyer des informations. Il manque plus qu’à ajouter des fonctions pour répondre à des requêtes.
+
+Pour commencer, il faut choisir un OPCode associé à la fonction à ajouter. Cet OPCode devra être renseigné dans le code Python pour pouvoir appeler correctement la méthode Arduino. Il existe plusieurs façon de stoquer cette valeur mais on préfèrera utilés un header et les `#define`. Voici un exemple de `instruction.h` de l’Arduino WheeledBase.
+
+```cpp
+#ifndef __INSTRUCTIONS_H__
+#define __INSTRUCTIONS_H__
+#include "../common/SerialTalks.h"
+
+// Opcodes declaration
+
+#define SET_OPENLOOP_VELOCITIES_OPCODE  0x04
+
+#define GET_CODEWHEELS_COUNTERS_OPCODE  0x0D
+
+#define SET_VELOCITIES_OPCODE           0x06
+
+#define START_PUREPURSUIT_OPCODE        0x07
+#define START_TURNONTHESPOT_OPCODE      0x09
+
+#define POSITION_REACHED_OPCODE         0x08
+
+#define SET_POSITION_OPCODE             0x0A
+#define GET_POSITION_OPCODE             0x0B
+#define GET_VELOCITIES_OPCODE           0x0C
+
+#define SET_PARAMETER_VALUE_OPCODE      0x0E
+#define GET_PARAMETER_VALUE_OPCODE      0x0F
+
+#define RESET_PUREPURSUIT_OPCODE        0x10
+#define ADD_PUREPURSUIT_WAYPOINT_OPCODE 0x11
+```
+
+Il est également conseillé de faire les fonctions pour gérer les instructions dans un `instruction.cpp`. Pour cela faire les imports nécessaire et utiliser les externs var dans votre code pour pouvoir compiler. Voici un autre exemple de `instruction.cpp`
+
+```cpp
+// Global variables
+
+extern DCMotorsDriver driver;
+extern DCMotor leftWheel;
+extern DCMotor rightWheel;
+
+extern Codewheel leftCodewheel;
+extern Codewheel rightCodewheel;
+
+extern Odometry odometry;
+
+extern VelocityController velocityControl;
+
+extern PID linVelPID;
+extern PID angVelPID;
+
+extern PositionController positionControl;
+
+extern PurePursuit   purePursuit;
+extern TurnOnTheSpot turnOnTheSpot;
+
+// Instructions
+
+void SET_OPENLOOP_VELOCITIES(SerialTalks& talks, Deserializer& input, Serializer& output)
+{
+    float leftWheelVel  = input.read<float>();
+    float rightWheelVel = input.read<float>();
+
+    velocityControl.disable();
+    positionControl.disable();
+    leftWheel .setVelocity(leftWheelVel);
+    rightWheel.setVelocity(rightWheelVel);
+}
+```
+
+Une fois que les fonctions sont créer avec les OPcode définis. Il ne reste plus qu’a associer le tout dans le SerialTalks. Cette opération dois être faite dans le setup du fichier `.ino` . Il est toutefois préférable d’executer cette opération après la création du socket. Voici un exemple d’association :
+
+```cpp
+void setup()
+{
+    Serial.begin(SERIALTALKS_BAUDRATE);
+    talks.begin(Serial);
+
+    talks.bind(SET_OPENLOOP_VELOCITIES_OPCODE, SET_OPENLOOP_VELOCITIES);
+    talks.bind(GET_CODEWHEELS_COUNTERS_OPCODE, GET_CODEWHEELS_COUNTERS);
+    talks.bind(SET_VELOCITIES_OPCODE, SET_VELOCITIES);
+}
+
+```
+
+Coté Python, il suffit ensuite de créer l’objet de le connecter coté python comme ceci :
+
+```python
+arduino = SerialTalks('ardresse')
+arduino.connect()
+```
+
+Il est également possible de créer une classe fille en la faisant hériter de Seriatlaks en python
+
+```python
+from serialtalks import *
+
+class Arduino(SerialTalks):
+    def __init__(self,adresse,..........):
+        SerialTalks.__init__(self,adresse)
+```
+
+<aside class="notice">
+Il est possible de ne pas écrire l’init si votre nouvelle object n’a pas besoin de variable pour son initialisation.
+</aside>
+
+Ensuite il faut ajouter à cette classe des méthodes qui correspondront à des OP code. Voici un exemple simple d’envoi d’une variable float à l’Arduino.
+
+```python
+def set_openloop_velocities(self, left, right):
+    self.send(SET_OPENLOOP_VELOCITIES_OPCODE, FLOAT(left),  FLOAT(right))
+```
+
+On peut voir dans cette méthode l’utilisation de l’objet `FLOAT`, cette object venu tout droit de la librairie SerialUtils permet la conversion en bytes. Les objets de conversions sont expliqués dans le chapitre [SerialUtils](https://clubrobot.github.io/Wiki/?cpp#serialutils).
+
+Pour indiquer l’OP code, il est vivement conseillé d’utiliser des constantes à definir en haut de votre fichier python de préférence en hexadécimal. Comme dans l’exemple ci contre.
+
+```python
+OPCODE = 0xF4
+```
+
+<aside class="warning">
+Avertissement - Les opcodes suivants sont réservés par la lib et ne doivent pas être utilisés par vos objects : `0x00` , `0x01` , `0x02`, ....
+</aside>
+
+## API
