@@ -25,7 +25,7 @@ La distance entre le centre du robot et la projection du centre de rotation sur 
 
 Voici un exemple de fonctionnement:
 
-![TurnOnTheSpot](../images/abstractMoveStrategy/gif_turnonthespot.png)
+![TurnOnTheSpot](../images/abstractMoveStrategy/gif_turnonthespot.gif)
 
 ## PurePursuit
 
@@ -35,7 +35,7 @@ La trajectoire a la particularité de suivre cette ligne avec des trajectoires c
 
 Le principe de Purpursuit est de générer un point à faire suivre au robot. Ce point est situé devant la projection du robot sur la droite. La distance de ce point cible est apellé lookahead. Une fois le point calculé, on en déduit les vitesses pour le rejoindre. L’astuce réside dans le fait que ce point va avancer en même temps que le robot jusqu’à la fin de la ligne brisée.
 
-![PurePusuit](../images/abstractMoveStrategy/gif_purpursuit.png)
+![PurePusuit](../images/abstractMoveStrategy/gif_purpursuit.gif)
 
 Nous avons donc besoin d’un algorithme pour le calcul de ce point intermédaire puis d’un autre pour calculer les vitesses associés. Comme je l’ai dit précedement, Purpursuit possède 4 algorithmes. En effet, il y a bien un algorithme pour le calcul des vitesses et pour la determination du point projeter sur la droite, mais nous avons aussi besoin d’un algorithme pour determiner un point sur la droite si le robot est trop loin de cette dernière, car aucun point ne respectera la distance limite entre lui et le robot. Purpursuit va aussi avoir besoin de la distance qui sépare le point intermédaire du point final pour le calcul des vitesses et pour renseigner l’utilisateur de l’avancée du suivi de ligne.
 
