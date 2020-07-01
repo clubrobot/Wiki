@@ -36,6 +36,8 @@ Bonne Lecture :D
 
 # Hello World !
 
+Vous trouvez ici un simple exemple Hello World pour bien comprendre la façon dont le code sera expliqué dans la suite de ce wiki.
+
 ```cpp
 #include <iostream>
 
@@ -51,5 +53,5 @@ print('Hello World !')
 > Hello World !
 
 <aside class="notice">
-You must replace <code>Hello World !</code> with your personal message.
+Vous pouvez remplacer <code>Hello World !</code> par cotre propre message.
 </aside>
