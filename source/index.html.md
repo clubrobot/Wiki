@@ -19,7 +19,7 @@ code_clipboard: true
 
 # Introduction
 
-Bienvenue dans la Documentation du Club Robot INSA Rennes !
+Bienvenue dans la Documentation du Club Robot INSA Rennes ! :D
 
 # Hello World !
 
