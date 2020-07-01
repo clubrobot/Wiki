@@ -20,6 +20,19 @@ code_clipboard: true
 # Introduction
 
 Bienvenue dans la Documentation du Club Robot INSA Rennes ! :D
+Vous pourrez trouver toutes les APIs utiles pour utiliser pleinement les robots et les librairies associées. Certaines librairies disposent en plus d’un API classique de quelques exemples pour bien illustrer leurs fonctionement.
+
+Cette documentation concerne tous les programmes embarqués (C++) et haut niveau (Python).
+
+Vous pouvez trouver sur votre gauche la liste des librairies documentées.
+
+Sur votre droite le code associé avec un onglet C++ et Python.
+
+Chaque morceau de code est expliqué dans la zone centrale et vous pouvez copier la ligne en question facilement pour vos tests.
+
+Également, lorsque du code python est disponible pour faire l'interface, il vous suffit de passer de l'onglet C++ à Python pour comprendre les interactions.
+
+Bonne Lecture :D
 
 # Hello World !
 
