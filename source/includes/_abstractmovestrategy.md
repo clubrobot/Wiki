@@ -65,4 +65,4 @@ Il faut savoir que dans l’algorithme ces points sont stockés sous la forme d�
 
 ## API
 
-[Purepursuit](https://github.com/clubrobot/Wiki/tree/gh-pages/includes/API/class_pure_pursuit.html)
+[Purepursuit](includes/API/class_pure_pursuit.html)
