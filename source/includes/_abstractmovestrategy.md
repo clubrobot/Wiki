@@ -10,7 +10,7 @@ Pour résoudre le problème, TurnOnTheSpot utilise un algorithme simple. Le prin
 
 Voici un shéma représentant les deux bases :
 
-![alt text](../images/abstractMoveStrategy/shema_turonthespot.png)
+![TurnOnTheSpot](../images/abstractMoveStrategy/shema_turonthespot.png)
 
 On peux voir la base normale (x,y) et la base du robot (u,v).
 
@@ -25,7 +25,7 @@ La distance entre le centre du robot et la projection du centre de rotation sur 
 
 Voici un exemple de fonctionnement:
 
-GIF
+![TurnOnTheSpot](../images/abstractMoveStrategy/gif_turnonthespot.png)
 
 ## PurePursuit
 
@@ -35,4 +35,32 @@ La trajectoire a la particularité de suivre cette ligne avec des trajectoires c
 
 Le principe de Purpursuit est de générer un point à faire suivre au robot. Ce point est situé devant la projection du robot sur la droite. La distance de ce point cible est apellé lookahead. Une fois le point calculé, on en déduit les vitesses pour le rejoindre. L’astuce réside dans le fait que ce point va avancer en même temps que le robot jusqu’à la fin de la ligne brisée.
 
-GIF
+![PurePusuit](../images/abstractMoveStrategy/gif_purpursuit.png)
+
+Nous avons donc besoin d’un algorithme pour le calcul de ce point intermédaire puis d’un autre pour calculer les vitesses associés. Comme je l’ai dit précedement, Purpursuit possède 4 algorithmes. En effet, il y a bien un algorithme pour le calcul des vitesses et pour la determination du point projeter sur la droite, mais nous avons aussi besoin d’un algorithme pour determiner un point sur la droite si le robot est trop loin de cette dernière, car aucun point ne respectera la distance limite entre lui et le robot. Purpursuit va aussi avoir besoin de la distance qui sépare le point intermédaire du point final pour le calcul des vitesses et pour renseigner l’utilisateur de l’avancée du suivi de ligne.
+
+Pour commencer, nous avons la méthode basique `computeVelSetpoints(float timestep)`, c’est cette méthode qui va calculer les vitesses pour le robot. Dans le début de son appel, `computeVelSetpoints` va calculer à l’aide des méthodes secondaire, un point intermédiaire pour faire ses calculs.
+
+Elle va en premier appeler `checkLookAheadGoal` qui va rendre vrai si un point intermédaire a été trouver et faux si non. Si `checkLookAheadGoal` n’a pas pu determiner de point, computeVelSetpoints va apeller `checkProjectionGoal`. Cette méthode va obligatoirement trouver le point le plus proche du robot sur la ligne brisée. Une fois le point trouvé, on va determiner les vitesses angulaires et linéaires.
+
+Pour determiner la vitesse linéaire, on fait la saturation de la multiplication de la distance par un coefficient proportionnel par la vitesse linéaire max.
+Pour la vitesse angulaire, on sature la multiplication entre l’angle formé par l’axe du robot et le vecteur robot point, par la vitesse angulaire max.
+
+Un problème va rapidement arriver si on ne modifie par les vitesses maximales. Car si notre robot désire rejoindre la ligne car il est désaxé mais que ça vitesse linéaire est trop importante par rapport à sa vitesse angulaire, il ne pourra alors jamais rejoindre la ligne rapidement car l’angle de courbure sera trop grand. Pour résoudre ce problème, avant de calculer les vitesses, on calcule des vitesses maximales pour permettre au robot d’atteindre un rayon de courbure satisfaisant.
+Ce rayon est le rayon du cercle formé par le point intermédaire et la tangente qu’elle doit faire avec le robot.
+
+![PurePusuit](../images/abstractMoveStrategy/schema_purpursuit.png)
+
+Le rayon est donc égal à `2*sin(alpha)/chord` .
+
+L’idée est de determiner la vitesse angulaire max pour avoir cette courbure. On utilise le fait que le rayon de courbure est égal à la vitesse linéaire sur la vitesse angulaire. On obtient donc la vitesse angulaire max égal à : `LinVelMax * abs(2.sin(delta)) / chord`.
+
+Il reste à régler le problème que si la nouvelle vitesse angulaire max calculée dépasse la vitesse angulaire max du robot, le robot ne pourra pas atteindre le rayon de courbure désiré. Si tel est le cas, on procède à l’envers. C’est à dire que l’on va determiner la vitesse linéaire max à partir de la vitesse angulaire max avec la formule : `AngVelMax * chord / abs(2.sin(delta))`.
+
+Le calcul du point intermédiaire se passe en deux étapes. On commence par faire la projection du robot sur le segment courant. On utilise le produit scalaire pour connaitre la distance entre la projection et le debut du segment. Une fois que ce point est calculé, on calcule la distance entre ce point et le robot avec un produit vectoriel. Cette distance nous permet ensuite de determiner la distance entre le point intermédiaire final et la projection du robot à l’aide d’un théorème de Pythagore et de la valeur du LookaHead.
+
+<aside class="notice">
+Il faut savoir que dans l’algorithme ces points sont stockés sous la forme d’un rapport entre la distance de ce point avec le début de segment et la taille du segment.
+</aside>
+
+## API
