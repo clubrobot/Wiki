@@ -126,7 +126,7 @@ On défini ici tout les opcode et les prototypes de chaques instructions.
 
 ## Source C++
 
-Il est également conseillé de faire les fonctions pour gérer les instructions dans un `instruction.cpp`. Pour cela faire les imports nécessaire et utiliser les externs var dans votre code pour pouvoir compiler. Voici un autre exemple de `instruction.cpp`
+Il est également conseillé de faire les fonctions pour gérer les instructions dans un `instruction.cpp`. Pour cela faire les imports nécessaire et utiliser les externs var contenue dans votre `.ino` pour pouvoir les utilliser. Voici un autre exemple de `instruction.cpp`
 
 ```cpp
 // Global variables
