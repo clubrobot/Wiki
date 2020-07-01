@@ -65,61 +65,138 @@ Il faut savoir que dans l’algorithme ces points sont stockés sous la forme d�
 
 ## API
 
-[Purepursuit](includes/API/html/class_pure_pursuit.html)
+| Members                                                              | Descriptions                                   |
+| -------------------------------------------------------------------- | ---------------------------------------------- |
+| `class`[`AbstractMoveStrategy`](#class_abstract_move_strategy)       | Interface de Stratégie de mouvement.           |
+| `class`[`PurePursuit`](#class_pure_pursuit)                          | Trajectoire courbe le long d'une ligne brisée. |
+| `class`[`TurnOnTheSpot`](#class_turn_on_the_spot)                    | Rotation du robot sans translations.           |
+| `struct`[`PurePursuit::Waypoint`](#struct_pure_pursuit_1_1_waypoint) | Structure d'un point de passage de Purpursuit. |
 
-# Summary
+# class `AbstractMoveStrategy`
 
-| Members                                                                            | Descriptions                                                                                                                                                                                                                  |
-| ---------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `class`[`AbstractCodewheel`](#class_abstract_codewheel)                            | Classe abstraite d'une roue codeuse.                                                                                                                                                                                          |
-| `class`[`AbstractMotor`](#class_abstract_motor)                                    | Instance de moteur.                                                                                                                                                                                                           |
-| `class`[`AbstractMoveStrategy`](#class_abstract_move_strategy)                     | Interface de Stratégie de mouvement.                                                                                                                                                                                          |
-| `class`[`Adafruit_TCS34725`](#class_adafruit___t_c_s34725)                         |
-| `class`[`BrushlessMotor`](#class_brushless_motor)                                  |
-| `class`[`ButtonCard`](#class_button_card)                                          |
-| `class`[`Clock`](#class_clock)                                                     | Utilitaire pour gérer le temps dans vos programmes Arduino.                                                                                                                                                                   |
-| `class`[`Codewheel`](#class_codewheel)                                             | Fait la passerelle entre les roues codeuses et le compteur.                                                                                                                                                                   |
-| `class`[`ColorSensor`](#class_color_sensor)                                        |
-| `class`[`CRC16`](#class_c_r_c16)                                                   |
-| `class`[`DCMotor`](#class_d_c_motor)                                               | Pilotage de moteur continu.                                                                                                                                                                                                   |
-| `class`[`DCMotorsDriver`](#class_d_c_motors_driver)                                | Utilisation des drivers moteurs.                                                                                                                                                                                              |
-| `class`[`DifferentialController`](#class_differential_controller)                  | Controle les moteurs.                                                                                                                                                                                                         |
-| `class`[`EchoHandler`](#class_echo_handler)                                        | Gère le pin de reception du capteur.                                                                                                                                                                                          |
-| `class`[`EndStop`](#class_end_stop)                                                | Capteur fin de course est une classe permettant d'utiliser les capteurs fins de courses (clic de souris/bouton poussoir) Pour utiliser cette classe le bouton doit être d'un côté relié à la masse et de l'autre à l'arduino. |
-| `class`[`FullSpeedServo`](#class_full_speed_servo)                                 | Pilotage de Servomoteur particulier.                                                                                                                                                                                          |
-| `class`[`Lsm303`](#class_lsm303)                                                   |
-| `class`[`MagneticCompas`](#class_magnetic_compas)                                  |
-| `class`[`NonCopyable`](#class_non_copyable)                                        | Classe a hériter pour empécher la copie de cette dernière.                                                                                                                                                                    |
-| `class`[`Odometry`](#class_odometry)                                               | Calcule la position en temps réel du robot.                                                                                                                                                                                   |
-| `class`[`SerialTalks::ostream`](#class_serial_talks_1_1ostream)                    | Stream virtuel pour les erreurs et autre. est un outils pour permettre de mieux transmettre les erreurs rencontrées et les STD::OUT.                                                                                          |
-| `class`[`PeriodicProcess`](#class_periodic_process)                                | Classe à implémenter pour gérer les appels dans la loop.                                                                                                                                                                      |
-| `class`[`PID`](#class_p_i_d)                                                       | Classe d'asservissement.                                                                                                                                                                                                      |
-| `class`[`PositionController`](#class_position_controller)                          | Classe support des objets [AbstractMoveStrategy](#class_abstract_move_strategy).                                                                                                                                              |
-| `class`[`PurePursuit`](#class_pure_pursuit)                                        | Trajectoire courbe le long d'une ligne brisée.                                                                                                                                                                                |
-| `class`[`QueueArray`](#class_queue_array)                                          |
-| `class`[`RobotArm`](#class_robot_arm)                                              |
-| `class`[`SensorListener`](#class_sensor_listener)                                  |
-| `class`[`SerialTalks`](#class_serial_talks)                                        | Object de communication serial avec un ordinateur.                                                                                                                                                                            |
-| `class`[`SerialTopics`](#class_serial_topics)                                      |
-| `class`[`ShiftDynamixelClass`](#class_shift_dynamixel_class)                       |
-| `class`[`ShiftRegAX12`](#class_shift_reg_a_x12)                                    |
-| `class`[`ShiftRegDCMotor`](#class_shift_reg_d_c_motor)                             |
-| `class`[`ShiftRegDCMotorsDriver`](#class_shift_reg_d_c_motors_driver)              |
-| `class`[`ShiftRegister`](#class_shift_register)                                    |
-| `class`[`SoftwareSerial`](#class_software_serial)                                  |
-| `class`[`StepByStepMotor`](#class_step_by_step_motor)                              |
-| `class`[`TrigHandler`](#class_trig_handler)                                        | Gère le pin d'émission du capteur.                                                                                                                                                                                            |
-| `class`[`TurnOnTheSpot`](#class_turn_on_the_spot)                                  | Rotation du robot sans translations.                                                                                                                                                                                          |
-| `class`[`TwoWire`](#class_two_wire)                                                |
-| `class`[`UltrasonicSensor`](#class_ultrasonic_sensor)                              | Permet d'utiliser des capteurs de distance ulrasons.                                                                                                                                                                          |
-| `class`[`Vector`](#class_vector)                                                   |
-| `class`[`VelocityController`](#class_velocity_controller)                          | Objet de controle de la vitesse.                                                                                                                                                                                              |
-| `class`[`VelocityServo`](#class_velocity_servo)                                    | Objet permettant de controller la vitesse d'un servomoteur.                                                                                                                                                                   |
-| `struct`[`_DELAY_TABLE`](#struct___d_e_l_a_y___t_a_b_l_e)                          |
-| `struct`[`Lsm303::AccelData`](#struct_lsm303_1_1_accel_data)                       |
-| `struct`[`Deserializer`](#struct_deserializer)                                     | Objet destiné à extraire des variables d'un flux en octet.                                                                                                                                                                    |
-| `struct`[`Lsm303::MagData`](#struct_lsm303_1_1_mag_data)                           |
-| `struct`[`Position`](#struct_position)                                             | Structure de position.                                                                                                                                                                                                        |
-| `struct`[`Serializer`](#struct_serializer)                                         | Objet destiné à creer un flux de sortie pour les programme cpp.                                                                                                                                                               |
-| `struct`[`SerialTopics::subscription_t`](#struct_serial_topics_1_1subscription__t) | Subscription context structure.                                                                                                                                                                                               |
-| `struct`[`PurePursuit::Waypoint`](#struct_pure_pursuit_1_1_waypoint)               | Structure d'un point de passage de Purpursuit.                                                                                                                                                                                |
+Interface de Stratégie de mouvement.
+
+Interface à implémenter pour réaliser une classe de strategie de mouvement.
+
+## Summary
+
+| Members                                                                                                                                                   | Descriptions                                         |
+| --------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------- |
+| `protected`[`PositionController`](#class_position_controller)`*`[`m_context`](#class_abstract_move_strategy_1a0a0cc07cae1127a7d7dc454d240d48ba)           | Pointeur du PositionControlleur associé.             |
+| `protected void`[`computeVelSetpoints`](#class_abstract_move_strategy_1a8bed0fd2cf5af27a7804d1be57823a24)`(float timestep)`                               | Calcul les nouvelles vitesses désirer.               |
+| `protected bool`[`getPositionReached`](#class_abstract_move_strategy_1a36fbdf31d04778a013fbbd160ff2ed07)`()`                                              | Indique si la position désirée est atteinte.         |
+| `protected inline const`[`Position`](#struct_position)`&`[`getPosInput`](#class_abstract_move_strategy_1a24e6faf227a28c534322f0918b4cb732)`() const`      | Retourne la position du robot.                       |
+| `protected inline const`[`Position`](#struct_position)`&`[`getPosSetpoint`](#class_abstract_move_strategy_1ae3d80bae8f22c55ff91ca3dc508d7434)`() const`   | Retourne la position à atteindre.                    |
+| `protected inline void`[`setVelSetpoints`](#class_abstract_move_strategy_1a9be3e48b174c6f084e84af1e903c78a4)`(float linVelSetpoint,float angVelSetpoint)` | Charge une nouvelle vitesse pour le robot.           |
+| `protected inline float`[`getLinVelKp`](#class_abstract_move_strategy_1ad2cdd59254831d777e276c053d93e507)`() const`                                       | Retourne le coef proportionnel de vitesse linéaire.  |
+| `protected inline float`[`getAngVelKp`](#class_abstract_move_strategy_1a34e828c9189a02c92889a476254d95da)`() const`                                       | Retourne le coef proportionnel de vitesse angulaire. |
+| `protected inline float`[`getLinVelMax`](#class_abstract_move_strategy_1a37f4a119ef96ba81c3621d6f640039b0)`() const`                                      | Retourne vitesse linéaire max.                       |
+| `protected inline float`[`getAngVelMax`](#class_abstract_move_strategy_1a8e71820d1f3dfea99ec35cf3aaf1319a)`() const`                                      | Retourne vitesse angulaire max.                      |
+| `protected inline float`[`getLinPosThreshold`](#class_abstract_move_strategy_1a4ac627813184bbde3b3031c3575f260f)`() const`                                | Retourne la précision cartésienne à atteindre.       |
+| `protected inline float`[`getAngPosThreshold`](#class_abstract_move_strategy_1aeb5f02ec6bc18993066712b728d901c5)`() const`                                | Retourne la précision angulaire à atteindre.         |
+
+## Members
+
+#### `protected`[`PositionController`](#class_position_controller)`*`[`m_context`](#class_abstract_move_strategy_1a0a0cc07cae1127a7d7dc454d240d48ba)
+
+Pointeur du PositionControlleur associé.
+
+#### `protected void`[`computeVelSetpoints`](#class_abstract_move_strategy_1a8bed0fd2cf5af27a7804d1be57823a24)`(float timestep)`
+
+Calcul les nouvelles vitesses désirer.
+
+Méthode à implémenter pour réaliser une [AbstractMoveStrategy](#class_abstract_move_strategy). Cette méthode calcul à partir de la position du robot des vitesses à suivre pour le robot.
+
+#### Parameters
+
+- `timestep` Temps depuis le dernier appel en secondes.
+
+#### `protected bool`[`getPositionReached`](#class_abstract_move_strategy_1a36fbdf31d04778a013fbbd160ff2ed07)`()`
+
+Indique si la position désirée est atteinte.
+
+Calcul la distance entre la position du robot et la position désirée selon le mode de calcul de l'[AbstractMoveStrategy](#class_abstract_move_strategy).
+
+#### Returns
+
+true Si la position est atteinte.
+
+#### Returns
+
+false Si la position n'est pas atteinte.
+
+#### `protected inline const`[`Position`](#struct_position)`&`[`getPosInput`](#class_abstract_move_strategy_1a24e6faf227a28c534322f0918b4cb732)`() const`
+
+Retourne la position du robot.
+
+Retourne la position du robot stocker dans le [PositionController](#class_position_controller).
+
+#### Returns
+
+La position du robot sous la struct [Position](#struct_position).
+
+#### `protected inline const`[`Position`](#struct_position)`&`[`getPosSetpoint`](#class_abstract_move_strategy_1ae3d80bae8f22c55ff91ca3dc508d7434)`() const`
+
+Retourne la position à atteindre.
+
+#### Returns
+
+[Position](#struct_position) à atteindre.
+
+#### `protected inline void`[`setVelSetpoints`](#class_abstract_move_strategy_1a9be3e48b174c6f084e84af1e903c78a4)`(float linVelSetpoint,float angVelSetpoint)`
+
+Charge une nouvelle vitesse pour le robot.
+
+#### Parameters
+
+- `linVelSetpoint` Vitesse linéaire en mm/s.
+
+- `angVelSetpoint` Vitesse angulaire en rad/s.
+
+#### `protected inline float`[`getLinVelKp`](#class_abstract_move_strategy_1ad2cdd59254831d777e276c053d93e507)`() const`
+
+Retourne le coef proportionnel de vitesse linéaire.
+
+#### Returns
+
+Coefficient proportionnel (sans unité).
+
+#### `protected inline float`[`getAngVelKp`](#class_abstract_move_strategy_1a34e828c9189a02c92889a476254d95da)`() const`
+
+Retourne le coef proportionnel de vitesse angulaire.
+
+#### Returns
+
+Coefficient proportionnel (sans unité).
+
+#### `protected inline float`[`getLinVelMax`](#class_abstract_move_strategy_1a37f4a119ef96ba81c3621d6f640039b0)`() const`
+
+Retourne vitesse linéaire max.
+
+#### Returns
+
+Vitesse en mm/s.
+
+#### `protected inline float`[`getAngVelMax`](#class_abstract_move_strategy_1a8e71820d1f3dfea99ec35cf3aaf1319a)`() const`
+
+Retourne vitesse angulaire max.
+
+#### Returns
+
+Vitesse en rad/s.
+
+#### `protected inline float`[`getLinPosThreshold`](#class_abstract_move_strategy_1a4ac627813184bbde3b3031c3575f260f)`() const`
+
+Retourne la précision cartésienne à atteindre.
+
+#### Returns
+
+Précision en mm.
+
+#### `protected inline float`[`getAngPosThreshold`](#class_abstract_move_strategy_1aeb5f02ec6bc18993066712b728d901c5)`() const`
+
+Retourne la précision angulaire à atteindre.
+
+#### Returns
+
+Précision en rad.
